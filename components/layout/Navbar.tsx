@@ -9,6 +9,20 @@ const navLinks = [
   { label: "About", href: "/about", external: false },
 ];
 
+function FacebookIcon() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="18"
+      height="18"
+      viewBox="0 0 24 24"
+      fill="#1877F2"
+    >
+      <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+    </svg>
+  );
+}
+
 function InstagramIcon() {
   return (
     <svg
@@ -17,14 +31,22 @@ function InstagramIcon() {
       height="18"
       viewBox="0 0 24 24"
       fill="none"
-      stroke="currentColor"
       strokeWidth="1.5"
       strokeLinecap="round"
       strokeLinejoin="round"
     >
-      <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
-      <circle cx="12" cy="12" r="4" />
-      <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none" />
+      <defs>
+        <linearGradient id="ig-gradient" x1="0%" y1="100%" x2="100%" y2="0%">
+          <stop offset="0%" stopColor="#f09433" />
+          <stop offset="25%" stopColor="#e6683c" />
+          <stop offset="50%" stopColor="#dc2743" />
+          <stop offset="75%" stopColor="#cc2366" />
+          <stop offset="100%" stopColor="#bc1888" />
+        </linearGradient>
+      </defs>
+      <rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke="url(#ig-gradient)" />
+      <circle cx="12" cy="12" r="4" stroke="url(#ig-gradient)" />
+      <circle cx="17.5" cy="6.5" r="0.8" fill="url(#ig-gradient)" stroke="none" />
     </svg>
   );
 }
@@ -36,9 +58,24 @@ function TikTokIcon() {
       width="17"
       height="17"
       viewBox="0 0 24 24"
-      fill="currentColor"
     >
-      <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.76a4.85 4.85 0 0 1-1.01-.07z" />
+      {/* Shadow layer — teal */}
+      <path
+        d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.76a4.85 4.85 0 0 1-1.01-.07z"
+        fill="#69C9D0"
+        transform="translate(-0.5, 0.5)"
+      />
+      {/* Shadow layer — red */}
+      <path
+        d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.76a4.85 4.85 0 0 1-1.01-.07z"
+        fill="#EE1D52"
+        transform="translate(0.5, -0.5)"
+      />
+      {/* Main black layer */}
+      <path
+        d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.76a4.85 4.85 0 0 1-1.01-.07z"
+        fill="#010101"
+      />
     </svg>
   );
 }
@@ -50,7 +87,7 @@ function TwitchIcon() {
       width="18"
       height="18"
       viewBox="0 0 24 24"
-      fill="currentColor"
+      fill="#9146FF"
     >
       <path d="M11.64 5.93h1.43v4.28h-1.43m3.93-4.28H17v4.28h-1.43M7 2L3.43 5.57v12.86h4.28V22l3.58-3.57h2.85L20.57 12V2m-1.43 9.29-2.85 2.85h-2.86l-2.5 2.5v-2.5H7.71V3.43h11.43z" />
     </svg>
@@ -97,11 +134,20 @@ export default function Navbar() {
         {/* Social Icons */}
         <div className="flex items-center gap-4">
           <a
+            href="https://facebook.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook"
+            className="opacity-80 hover:opacity-100 transition-opacity duration-200"
+          >
+            <FacebookIcon />
+          </a>
+          <a
             href="https://instagram.com/shawniesloclab"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Instagram"
-            className="text-gray-400 hover:text-black transition-colors duration-200"
+            className="opacity-80 hover:opacity-100 transition-opacity duration-200"
           >
             <InstagramIcon />
           </a>
@@ -110,7 +156,7 @@ export default function Navbar() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="TikTok"
-            className="text-gray-400 hover:text-black transition-colors duration-200"
+            className="opacity-80 hover:opacity-100 transition-opacity duration-200"
           >
             <TikTokIcon />
           </a>
@@ -119,7 +165,7 @@ export default function Navbar() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Twitch"
-            className="text-gray-400 hover:text-black transition-colors duration-200"
+            className="opacity-80 hover:opacity-100 transition-opacity duration-200"
           >
             <TwitchIcon />
           </a>
