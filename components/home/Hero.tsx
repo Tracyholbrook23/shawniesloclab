@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 24 },
   animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.8, delay, ease: [0.22, 1, 0.36, 1] },
+  transition: { duration: 0.8, delay, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] },
 });
 
 export default function Hero() {
@@ -72,7 +72,7 @@ export default function Hero() {
       <motion.div
         initial={{ opacity: 0, x: 40 }}
         animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 1, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
+        transition={{ duration: 1, delay: 0.15, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}
         className="absolute right-0 top-0 h-full w-[52%] md:w-[50%] hidden md:block"
       >
         {/* Fade blend on left edge so image melts into text area */}
