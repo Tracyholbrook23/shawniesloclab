@@ -9,7 +9,7 @@ const schedule = [
 
 export default function StreamSection() {
   return (
-    <section className="relative py-24 md:py-32 bg-white overflow-hidden">
+    <section className="relative py-24 md:py-32 bg-transparent overflow-hidden">
 
       {/* Very subtle lab grid — barely visible */}
       <div
@@ -64,7 +64,7 @@ export default function StreamSection() {
 
           {/* Right — Schedule card */}
           <FadeIn direction="left" delay={0.2}>
-            <div className="border border-[#F472B6]/20 bg-white p-8">
+            <div className="border border-[#F472B6]/20 bg-transparent p-8">
 
               <p className="text-xs tracking-[0.3em] uppercase text-[#F472B6] mb-7">
                 Livestream Schedule

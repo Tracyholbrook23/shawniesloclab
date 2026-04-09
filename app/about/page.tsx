@@ -19,7 +19,7 @@ const credentials = [
 
 export default function AboutPage() {
   return (
-    <main className="bg-white text-black">
+    <main className="bg-transparent text-black">
 
       {/* ── HERO ── */}
       <section className="relative min-h-[70vh] flex items-stretch overflow-hidden">
@@ -29,7 +29,7 @@ export default function AboutPage() {
           className="absolute left-0 top-0 h-full w-[55%] pointer-events-none z-0"
           style={{
             background:
-              "radial-gradient(ellipse at 20% 60%, rgba(244,114,182,0.09) 0%, rgba(255,255,255,0) 70%)",
+              "radial-gradient(ellipse at 20% 60%, rgba(244,114,182,0.09) 0%, rgba(253,248,251,0) 70%)",
           }}
         />
 
@@ -54,7 +54,7 @@ export default function AboutPage() {
             className="absolute inset-y-0 left-0 w-24 z-10 pointer-events-none"
             style={{
               background:
-                "linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%)",
+                "linear-gradient(to right, rgba(253,248,251,1) 0%, rgba(253,248,251,0) 100%)",
             }}
           />
           {/* Bottom fade */}
@@ -62,7 +62,7 @@ export default function AboutPage() {
             className="absolute bottom-0 inset-x-0 h-20 z-10 pointer-events-none"
             style={{
               background:
-                "linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%)",
+                "linear-gradient(to bottom, rgba(253,248,251,0) 0%, rgba(253,248,251,1) 100%)",
             }}
           />
           {/* Subtle pink glow behind subject */}
@@ -70,7 +70,7 @@ export default function AboutPage() {
             className="absolute inset-0 z-0 pointer-events-none"
             style={{
               background:
-                "radial-gradient(ellipse at 55% 35%, rgba(244,114,182,0.09) 0%, rgba(255,255,255,0) 60%)",
+                "radial-gradient(ellipse at 55% 35%, rgba(244,114,182,0.09) 0%, rgba(253,248,251,0) 60%)",
             }}
           />
           <Image
@@ -161,7 +161,7 @@ export default function AboutPage() {
 
       {/* ── LAB IMAGE BREAK ── */}
       <FadeIn>
-        <section className="relative w-full aspect-[16/7] overflow-hidden bg-gray-50">
+        <section className="relative w-full aspect-[16/7] overflow-hidden bg-transparent">
           <Image
             src="/images/shawnie/about-lab.jpeg"
             alt="Shawnie in the lab"
@@ -173,7 +173,7 @@ export default function AboutPage() {
       </FadeIn>
 
       {/* ── WHAT SHE DOES ── */}
-      <section className="py-24 md:py-32 bg-[#f9f9f9]">
+      <section className="py-24 md:py-32 bg-transparent">
         <div className="max-w-7xl mx-auto px-8 md:px-16 lg:px-24">
           <FadeIn>
             <p className="text-xs tracking-[0.3em] uppercase text-gray-400 mb-5">

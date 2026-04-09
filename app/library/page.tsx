@@ -43,7 +43,7 @@ const categories = [
 
 export default function LibraryPage() {
   return (
-    <main className="bg-white text-black">
+    <main className="bg-transparent text-black">
 
       {/* Hero */}
       <section className="pt-24 pb-16 md:pt-32 md:pb-20 px-6 md:px-10 max-w-7xl mx-auto">
@@ -65,7 +65,7 @@ export default function LibraryPage() {
       </section>
 
       {/* Categories */}
-      <section className="py-16 md:py-20 bg-[#f9f9f9]">
+      <section className="py-16 md:py-20 bg-transparent">
         <div className="max-w-7xl mx-auto px-6 md:px-10">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {categories.map((cat, i) => (

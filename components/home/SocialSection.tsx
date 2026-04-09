@@ -11,7 +11,7 @@ const posts = [
 
 export default function SocialSection() {
   return (
-    <section className="py-24 md:py-28 bg-white border-t border-gray-100">
+    <section className="py-24 md:py-28 bg-transparent border-t border-[#F472B6]/15">
       <div className="max-w-7xl mx-auto px-6 md:px-10">
 
         <FadeIn>
