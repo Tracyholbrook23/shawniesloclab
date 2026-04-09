@@ -30,6 +30,8 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-white text-black">
+        {/* Soft pink border frame — fixed, sits above everything */}
+        <div className="fixed inset-0 z-50 pointer-events-none border border-[#F472B6]/30" />
         <Navbar />
         {children}
         <Footer />
