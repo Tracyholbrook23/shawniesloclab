@@ -92,9 +92,14 @@ export default function Footer() {
           <p className="text-xs text-gray-600">
             © {new Date().getFullYear()} Shawnie's Loc Lab. All rights reserved.
           </p>
-          <p className="text-xs text-gray-600 tracking-widest uppercase">
-            Built in the Lab.
-          </p>
+          <a
+            href="https://instagram.com/szhimuptray"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-xs text-gray-600 hover:text-gray-400 transition-colors duration-200"
+          >
+            Built by Tracy
+          </a>
         </div>
 
       </div>
