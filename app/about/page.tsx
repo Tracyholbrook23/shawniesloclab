@@ -164,87 +164,60 @@ export default function AboutPage() {
       </section>
 
       {/* ── WHAT SHE DOES ── */}
-      <section className="py-24 md:py-32 border-t border-[#F472B6]/15 overflow-hidden">
+      <section className="py-24 md:py-32 border-t border-[#F472B6]/15">
         <div className="max-w-7xl mx-auto px-8 md:px-16 lg:px-24">
 
-          <div className="grid md:grid-cols-[1fr_1fr] gap-16 items-start">
-
-            {/* Left — image with purpose */}
-            <FadeIn direction="right">
-              <div className="relative aspect-[3/4] overflow-hidden">
-                {/* Right-edge fade into page */}
-                <div
-                  className="absolute inset-y-0 right-0 w-16 z-10 pointer-events-none"
-                  style={{
-                    background:
-                      "linear-gradient(to left, rgba(253,248,251,1) 0%, rgba(253,248,251,0) 100%)",
-                  }}
-                />
-                {/* Bottom fade */}
-                <div
-                  className="absolute bottom-0 inset-x-0 h-20 z-10 pointer-events-none"
-                  style={{
-                    background:
-                      "linear-gradient(to bottom, rgba(253,248,251,0) 0%, rgba(253,248,251,0.7) 100%)",
-                  }}
-                />
-                <Image
-                  src="/images/shawnie/about-lab.jpeg"
-                  alt="Shawnie working in the lab"
-                  fill
-                  className="object-cover object-top"
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                />
-              </div>
+          {/* Header */}
+          <div className="grid md:grid-cols-2 gap-6 mb-16 items-end">
+            <FadeIn>
+              <p className="text-xs tracking-[0.3em] uppercase text-[#F472B6] mb-4">
+                What She Does
+              </p>
+              <h2 className="text-4xl md:text-5xl font-bold tracking-tight leading-tight">
+                The lab has<br />many rooms.
+              </h2>
             </FadeIn>
+            <FadeIn delay={0.1}>
+              <p className="text-gray-500 leading-relaxed md:max-w-sm md:ml-auto">
+                Shawnie operates across multiple spaces — the salon chair, the studio, the screen, and the shelf. Each one is intentional.
+              </p>
+            </FadeIn>
+          </div>
 
-            {/* Right — text */}
-            <div className="flex flex-col justify-center md:pt-6">
-              <FadeIn delay={0.1}>
-                <p className="text-xs tracking-[0.3em] uppercase text-[#F472B6] mb-5">
-                  What She Does
-                </p>
-                <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-12 leading-tight">
-                  The lab has<br />many rooms.
-                </h2>
+          {/* Pillars — horizontal rule layout */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-[#F472B6]/10">
+            {[
+              {
+                title: "The Chair",
+                body: "Precision loc services — installation, maintenance, repair, and styling. Every appointment is an experience.",
+              },
+              {
+                title: "The Shop",
+                body: "Curated products and formulas for loc health and scalp care. Science-tested. Community-approved.",
+              },
+              {
+                title: "The Podcast",
+                body: "Real conversations about hair, business, culture, and life. No filter, no fluff.",
+              },
+              {
+                title: "The Stream",
+                body: "Live on Twitch — Q&As, behind-the-scenes, and community sessions you don't want to miss.",
+              },
+            ].map((item, i) => (
+              <FadeIn key={item.title} delay={i * 0.08}>
+                <div className="bg-[#fdf8fb] p-8 h-full">
+                  <p className="text-xs tracking-[0.25em] uppercase text-[#F472B6] mb-4">
+                    0{i + 1}
+                  </p>
+                  <p className="text-sm font-semibold tracking-widest uppercase text-black mb-3">
+                    {item.title}
+                  </p>
+                  <p className="text-sm text-gray-500 leading-relaxed">
+                    {item.body}
+                  </p>
+                </div>
               </FadeIn>
-
-              <div className="space-y-8">
-                {[
-                  {
-                    title: "The Chair",
-                    body: "Precision loc services — installation, maintenance, repair, and styling. Every appointment is an experience.",
-                  },
-                  {
-                    title: "The Shop",
-                    body: "Curated products and formulas for loc health and scalp care. Science-tested. Community-approved.",
-                  },
-                  {
-                    title: "The Podcast",
-                    body: "Real conversations about hair, business, culture, and life. No filter, no fluff.",
-                  },
-                  {
-                    title: "The Stream",
-                    body: "Live on Twitch — Q&As, behind-the-scenes, and community sessions you don't want to miss.",
-                  },
-                ].map((item, i) => (
-                  <FadeIn key={item.title} delay={0.15 + i * 0.08}>
-                    <div className="flex gap-5 items-start border-b border-gray-100 pb-8">
-                      <div className="w-px h-10 bg-[#F472B6]/40 shrink-0 mt-0.5" />
-                      <div>
-                        <p className="text-sm font-semibold tracking-widest uppercase text-black mb-1.5">
-                          {item.title}
-                        </p>
-                        <p className="text-sm text-gray-500 leading-relaxed">
-                          {item.body}
-                        </p>
-                      </div>
-                    </div>
-                  </FadeIn>
-                ))}
-              </div>
-            </div>
-
+            ))}
           </div>
         </div>
       </section>
