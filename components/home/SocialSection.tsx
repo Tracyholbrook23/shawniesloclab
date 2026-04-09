@@ -46,7 +46,7 @@ export default function SocialSection() {
                 className="group block shrink-0 w-44 md:w-auto"
               >
                 {/* Placeholder card — replace with real Instagram embed later */}
-                <div className="relative aspect-square bg-[#FCE7F3]/40 border border-[#F472B6]/20 flex flex-col items-center justify-center gap-2 overflow-hidden group-hover:border-[#F472B6] transition-colors duration-300">
+                <div className="relative aspect-square bg-[#FCE7F3]/40 border border-[#F472B6]/20 flex flex-col items-center justify-center gap-2 overflow-hidden group-hover:border-[#F472B6] group-hover:scale-105 group-hover:shadow-[0_8px_28px_rgba(244,114,182,0.18)] transition-all duration-300 ease-out">
                   {/* subtle lab grid */}
                   <div
                     className="absolute inset-0 opacity-10"
