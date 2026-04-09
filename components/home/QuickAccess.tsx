@@ -90,7 +90,7 @@ export default function QuickAccess() {
                 href={card.href}
                 target={card.external ? "_blank" : undefined}
                 rel={card.external ? "noopener noreferrer" : undefined}
-                className="group flex flex-col gap-5 p-7 border border-gray-100 hover:border-[#F472B6] hover:shadow-sm transition-all duration-300 cursor-pointer h-full"
+                className="group flex flex-col gap-5 p-7 border border-gray-100 hover:border-[#F472B6] hover:-translate-y-1 hover:shadow-[0_8px_24px_rgba(244,114,182,0.1)] transition-all duration-300 cursor-pointer h-full"
               >
                 <span className="text-[#F472B6] group-hover:scale-110 transition-transform duration-200 inline-block">
                   {card.icon}

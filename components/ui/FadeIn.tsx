@@ -17,9 +17,9 @@ export default function FadeIn({
   className = "",
 }: FadeInProps) {
   const offsets = {
-    up: { y: 28, x: 0 },
-    left: { y: 0, x: -28 },
-    right: { y: 0, x: 28 },
+    up: { y: 16, x: 0 },
+    left: { y: 0, x: -16 },
+    right: { y: 0, x: 16 },
     none: { y: 0, x: 0 },
   };
 
@@ -28,9 +28,9 @@ export default function FadeIn({
       className={className}
       initial={{ opacity: 0, ...offsets[direction] }}
       whileInView={{ opacity: 1, y: 0, x: 0 }}
-      viewport={{ once: true, margin: "-80px" }}
+      viewport={{ once: true, margin: "-60px" }}
       transition={{
-        duration: 0.7,
+        duration: 0.6,
         delay,
         ease: [0.22, 1, 0.36, 1],
       }}
