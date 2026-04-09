@@ -80,12 +80,9 @@ export default function Footer() {
               ))}
             </ul>
             <p className="text-xs tracking-[0.2em] uppercase text-gray-500 mb-3">Contact</p>
-            <a
-              href="mailto:hello@shawniesloclab.com"
-              className="text-xs text-gray-400 hover:text-[#F472B6] transition-colors duration-200"
-            >
-              hello@shawniesloclab.com
-            </a>
+            <span className="text-xs text-gray-400">
+              contact@shawniesloclab.com
+            </span>
           </div>
 
         </div>
