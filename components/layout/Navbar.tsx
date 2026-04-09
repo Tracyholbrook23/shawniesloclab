@@ -97,7 +97,7 @@ export default function Navbar() {
         {/* Social Icons */}
         <div className="flex items-center gap-4">
           <a
-            href="https://instagram.com"
+            href="https://instagram.com/shawniesloclab"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Instagram"
@@ -106,7 +106,7 @@ export default function Navbar() {
             <InstagramIcon />
           </a>
           <a
-            href="https://tiktok.com"
+            href="https://tiktok.com/@shawniesloclab"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="TikTok"
@@ -115,7 +115,7 @@ export default function Navbar() {
             <TikTokIcon />
           </a>
           <a
-            href="https://twitch.tv"
+            href="https://twitch.tv/shawniesloclab"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Twitch"
