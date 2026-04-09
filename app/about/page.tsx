@@ -22,69 +22,73 @@ export default function AboutPage() {
     <main className="bg-transparent text-black">
 
       {/* ── HERO ── */}
-      <section className="relative min-h-[70vh] flex items-stretch overflow-hidden">
+      <section className="relative min-h-[80vh] flex items-center overflow-hidden">
 
-        {/* Soft pink glow behind text */}
+        {/* Soft pink glow — anchored center-left */}
         <div
-          className="absolute left-0 top-0 h-full w-[55%] pointer-events-none z-0"
+          className="absolute left-0 top-0 h-full w-[60%] pointer-events-none z-0"
           style={{
             background:
-              "radial-gradient(ellipse at 20% 60%, rgba(244,114,182,0.09) 0%, rgba(253,248,251,0) 70%)",
+              "radial-gradient(ellipse at 20% 50%, rgba(244,114,182,0.08) 0%, rgba(253,248,251,0) 65%)",
           }}
         />
 
-        {/* Left — Text */}
-        <div className="relative z-10 flex flex-col justify-end w-full md:w-[52%] px-8 md:px-16 lg:px-24 py-16">
-          <FadeIn delay={0.1}>
-            <p className="text-xs tracking-[0.3em] uppercase text-[#F472B6] mb-4">
-              The Founder
-            </p>
-          </FadeIn>
-          <FadeIn delay={0.2}>
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-none">
-              Shawnie<br />Holbrook
-            </h1>
-          </FadeIn>
-        </div>
+        {/* Layout: text left, image right — tighter columns */}
+        <div className="relative z-10 w-full grid md:grid-cols-[1fr_480px] lg:grid-cols-[1fr_540px] items-center gap-0">
 
-        {/* Right — Image, same treatment as homepage hero */}
-        <div className="absolute right-0 top-0 h-full w-[52%] md:w-[50%] hidden md:block">
-          {/* Left-edge white fade — melts into text area */}
-          <div
-            className="absolute inset-y-0 left-0 w-24 z-10 pointer-events-none"
-            style={{
-              background:
-                "linear-gradient(to right, rgba(253,248,251,1) 0%, rgba(253,248,251,0) 100%)",
-            }}
-          />
-          {/* Bottom fade */}
-          <div
-            className="absolute bottom-0 inset-x-0 h-20 z-10 pointer-events-none"
-            style={{
-              background:
-                "linear-gradient(to bottom, rgba(253,248,251,0) 0%, rgba(253,248,251,1) 100%)",
-            }}
-          />
-          {/* Subtle pink glow behind subject */}
-          <div
-            className="absolute inset-0 z-0 pointer-events-none"
-            style={{
-              background:
-                "radial-gradient(ellipse at 55% 35%, rgba(244,114,182,0.09) 0%, rgba(253,248,251,0) 60%)",
-            }}
-          />
-          <Image
-            src="/images/shawnie/about-hero.jpeg"
-            alt="Shawnie Holbrook — founder of Shawnie's Loc Lab"
-            fill
-            priority
-            className="object-cover object-top"
-            sizes="50vw"
-          />
+          {/* Left — Text, vertically centered */}
+          <div className="px-8 md:px-16 lg:px-24 py-16">
+            <FadeIn delay={0.1}>
+              <p className="text-xs tracking-[0.3em] uppercase text-[#F472B6] mb-5">
+                The Founder
+              </p>
+            </FadeIn>
+            <FadeIn delay={0.2}>
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-none">
+                Shawnie<br />Holbrook
+              </h1>
+            </FadeIn>
+          </div>
+
+          {/* Right — Image column, bleeds to edge */}
+          <div className="relative hidden md:block h-[80vh]">
+            {/* Left-edge fade — pulls image into text */}
+            <div
+              className="absolute inset-y-0 left-0 w-20 z-10 pointer-events-none"
+              style={{
+                background:
+                  "linear-gradient(to right, rgba(253,248,251,1) 0%, rgba(253,248,251,0) 100%)",
+              }}
+            />
+            {/* Subtle bottom whisper — barely there */}
+            <div
+              className="absolute bottom-0 inset-x-0 h-10 z-10 pointer-events-none"
+              style={{
+                background:
+                  "linear-gradient(to bottom, rgba(253,248,251,0) 0%, rgba(253,248,251,0.4) 100%)",
+              }}
+            />
+            {/* Pink glow */}
+            <div
+              className="absolute inset-0 z-0 pointer-events-none"
+              style={{
+                background:
+                  "radial-gradient(ellipse at 55% 30%, rgba(244,114,182,0.08) 0%, rgba(253,248,251,0) 55%)",
+              }}
+            />
+            <Image
+              src="/images/shawnie/about-hero.jpeg"
+              alt="Shawnie Holbrook — founder of Shawnie's Loc Lab"
+              fill
+              priority
+              className="object-cover object-top"
+              sizes="540px"
+            />
+          </div>
         </div>
 
         {/* Mobile image */}
-        <div className="md:hidden relative w-full min-h-[55vw] mt-auto">
+        <div className="md:hidden absolute inset-0 z-0 opacity-20">
           <Image
             src="/images/shawnie/about-hero.jpeg"
             alt="Shawnie Holbrook — founder of Shawnie's Loc Lab"
