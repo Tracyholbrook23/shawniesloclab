@@ -106,7 +106,7 @@ export default function Navbar() {
             <InstagramIcon />
           </a>
           <a
-            href="https://tiktok.com/@shawniesloclab"
+            href="https://tiktok.com/@theshawniebrook"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="TikTok"
