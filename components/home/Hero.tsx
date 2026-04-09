@@ -18,8 +18,8 @@ export default function Hero() {
           </h1>
         </FadeIn>
         <FadeIn delay={0.3}>
-          <p className="text-base md:text-lg text-gray-500 max-w-sm mb-10 leading-relaxed">
-            Where precision meets style. Welcome to the lab.
+          <p className="text-base md:text-lg text-gray-400 max-w-sm mb-10 leading-relaxed italic">
+            Quote coming soon.
           </p>
         </FadeIn>
         <FadeIn delay={0.4}>
@@ -31,7 +31,7 @@ export default function Hero() {
             >
               Book Appointment
             </Button>
-            <Button variant="outline">Explore</Button>
+            <Button variant="outline" href="https://benable.com/i/R4E5C?utm_campaign=v1-0425&utm_content=807109&utm_medium=onboarding-profile-share&utm_source=ig" target="_blank">Shop Hair Care</Button>
           </div>
         </FadeIn>
       </div>

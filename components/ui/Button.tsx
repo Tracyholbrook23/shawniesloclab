@@ -1,6 +1,6 @@
 import React from "react";
 
-type ButtonVariant = "primary" | "outline";
+type ButtonVariant = "primary" | "outline" | "pink";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: ButtonVariant;
@@ -22,8 +22,8 @@ export default function Button({
 
   const variants: Record<ButtonVariant, string> = {
     primary: "bg-black text-white hover:opacity-75",
-    outline:
-      "border border-black text-black bg-transparent hover:bg-black hover:text-white",
+    outline: "border border-black text-black bg-transparent hover:bg-black hover:text-white",
+    pink: "bg-[#F472B6] text-white hover:bg-[#DB2777]",
   };
 
   const classes = `${base} ${variants[variant]} ${className}`;

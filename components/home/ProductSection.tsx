@@ -1,67 +1,50 @@
-import Image from "next/image";
-import Button from "@/components/ui/Button";
 import FadeIn from "@/components/ui/FadeIn";
-
-const products = [
-  {
-    src: "/images/shawnie/product-formula-1.jpeg",
-    alt: "Lab formula — single beaker",
-    label: "The Formula",
-    description: "Precision-crafted treatments developed exclusively for loc care.",
-  },
-  {
-    src: "/images/shawnie/product-formula-2.jpeg",
-    alt: "Lab formula — active pour",
-    label: "The Process",
-    description: "Science-backed application methods for lasting loc health.",
-  },
-];
+import Button from "@/components/ui/Button";
 
 export default function ProductSection() {
   return (
     <section className="py-24 md:py-32 bg-white">
       <div className="max-w-7xl mx-auto px-6 md:px-10">
+
         {/* Header */}
         <FadeIn>
-          <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-16 gap-6">
+          <p className="text-xs tracking-[0.3em] uppercase text-[#F472B6] mb-4">
+            Hair Care
+          </p>
+          <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-black leading-tight mb-4">
+            SLL Scalp Formulas
+          </h2>
+          <p className="text-gray-400 mb-14 max-w-md leading-relaxed">
+            Science-backed formulas built for loc health. Developed in the lab, tested by the community.
+          </p>
+        </FadeIn>
+
+        {/* Coming Soon card */}
+        <FadeIn delay={0.15}>
+          <div className="border border-[#F472B6]/30 bg-[#FCE7F3]/20 p-14 flex flex-col items-center justify-center text-center gap-6 min-h-[300px]">
+            {/* Flask icon */}
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#F472B6" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M9 3h6M9 3v7l-4.5 9A2 2 0 0 0 6.5 22h11a2 2 0 0 0 2-1l-4.5-9V3" />
+              <line x1="6" y1="14" x2="18" y2="14" />
+            </svg>
             <div>
-              <p className="text-xs tracking-[0.3em] uppercase text-gray-400 mb-4">
-                The Shop
+              <p className="text-xl font-bold tracking-tight text-black mb-2">
+                Coming Soon
               </p>
-              <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-black leading-tight">
-                Products from<br />the lab.
-              </h2>
+              <p className="text-sm text-gray-400 max-w-xs leading-relaxed">
+                The SLL product line is in development. Stay close — the formulas are almost ready.
+              </p>
             </div>
-            <Button variant="outline" href="https://benable.com/i/R4E5C?utm_campaign=v1-0425&utm_content=807109&utm_medium=onboarding-profile-share&utm_source=ig" target="_blank">
-              View All Products
+            <Button
+              variant="pink"
+              href="https://benable.com/i/R4E5C?utm_campaign=v1-0425&utm_content=807109&utm_medium=onboarding-profile-share&utm_source=ig"
+              target="_blank"
+            >
+              Shop Hair Care
             </Button>
           </div>
         </FadeIn>
 
-        {/* Product Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {products.map((product, i) => (
-            <FadeIn key={product.label} delay={i * 0.15}>
-              <div className="group cursor-pointer">
-                <div className="relative w-full aspect-[3/4] overflow-hidden bg-gray-50 mb-5">
-                  <Image
-                    src={product.src}
-                    alt={product.alt}
-                    fill
-                    className="object-cover object-top transition-transform duration-700 group-hover:scale-105"
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                  />
-                </div>
-                <p className="text-sm font-semibold tracking-widest uppercase text-black mb-1">
-                  {product.label}
-                </p>
-                <p className="text-sm text-gray-500 leading-relaxed max-w-xs">
-                  {product.description}
-                </p>
-              </div>
-            </FadeIn>
-          ))}
-        </div>
       </div>
     </section>
   );
