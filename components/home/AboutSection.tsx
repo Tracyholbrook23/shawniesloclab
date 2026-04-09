@@ -47,22 +47,46 @@ export default function AboutSection() {
           </FadeIn>
         </div>
 
-        {/* Image — sharp portrait, clean editorial */}
+        {/* Image — editorial portrait, soft edge integration */}
         <FadeIn direction="left" delay={0.2} className="relative w-full aspect-[3/4]">
-          {/* Very light pink wash behind subject — no harsh edges */}
-          <div
-            className="absolute inset-0 z-0 pointer-events-none rounded-sm"
-            style={{
-              background:
-                "radial-gradient(ellipse at 55% 30%, rgba(244,114,182,0.08) 0%, rgba(255,255,255,0) 60%)",
-            }}
-          />
           <Image
             src="/images/shawnie/about-shawnie.jpeg"
             alt="Shawnie — founder of Shawnie's Loc Lab"
             fill
             className="object-cover object-top"
             sizes="(max-width: 768px) 100vw, 50vw"
+          />
+          {/* Left edge — dissolves into text column */}
+          <div
+            className="absolute inset-y-0 left-0 w-16 pointer-events-none z-10"
+            style={{
+              background:
+                "linear-gradient(to left, rgba(255,255,255,0) 0%, rgba(255,255,255,0.95) 100%)",
+            }}
+          />
+          {/* Top edge — dissolves into white page */}
+          <div
+            className="absolute top-0 inset-x-0 h-12 pointer-events-none z-10"
+            style={{
+              background:
+                "linear-gradient(to bottom, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0) 100%)",
+            }}
+          />
+          {/* Bottom edge — soft close */}
+          <div
+            className="absolute bottom-0 inset-x-0 h-16 pointer-events-none z-10"
+            style={{
+              background:
+                "linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.85) 100%)",
+            }}
+          />
+          {/* Right edge — dissolves into page margin */}
+          <div
+            className="absolute inset-y-0 right-0 w-10 pointer-events-none z-10"
+            style={{
+              background:
+                "linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.8) 100%)",
+            }}
           />
         </FadeIn>
 
