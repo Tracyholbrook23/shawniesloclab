@@ -96,7 +96,7 @@ function TwitchIcon() {
 
 export default function Navbar() {
   return (
-    <header className="sticky top-0 z-50 bg-white border-b border-gray-100">
+    <header className="sticky top-0 z-50 bg-[#fdf8fb] border-b border-[#F472B6]/15">
       <nav className="max-w-7xl mx-auto px-6 md:px-10 h-16 flex items-center justify-between gap-8">
         {/* Logo */}
         <Link

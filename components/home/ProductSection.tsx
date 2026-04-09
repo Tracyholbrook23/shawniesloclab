@@ -3,7 +3,7 @@ import Button from "@/components/ui/Button";
 
 export default function ProductSection() {
   return (
-    <section className="py-24 md:py-32 bg-white">
+    <section className="py-24 md:py-32 bg-transparent">
       <div className="max-w-7xl mx-auto px-6 md:px-10">
 
         {/* Header */}

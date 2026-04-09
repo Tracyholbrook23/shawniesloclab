@@ -21,7 +21,7 @@ const pillars = [
 
 export default function WhySection() {
   return (
-    <section className="py-24 md:py-32 bg-white overflow-hidden">
+    <section className="py-24 md:py-32 bg-transparent overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 md:px-10 grid md:grid-cols-2 gap-8 md:gap-4 items-center">
 
         {/* Image — editorial, blended */}
@@ -46,7 +46,7 @@ export default function WhySection() {
             className="absolute inset-y-0 right-0 w-24 pointer-events-none z-10"
             style={{
               background:
-                "linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%)",
+                "linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(253,248,251,1) 100%)",
             }}
           />
           {/* Bottom fade */}
@@ -54,7 +54,7 @@ export default function WhySection() {
             className="absolute bottom-0 inset-x-0 h-24 pointer-events-none z-10"
             style={{
               background:
-                "linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%)",
+                "linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(253,248,251,1) 100%)",
             }}
           />
         </FadeIn>

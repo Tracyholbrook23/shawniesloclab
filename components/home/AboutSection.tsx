@@ -84,7 +84,7 @@ export default function AboutSection() {
             className="absolute inset-y-0 left-0 w-14 pointer-events-none z-10"
             style={{
               background:
-                "linear-gradient(to left, rgba(255,255,255,0) 0%, rgba(255,255,255,0.85) 100%)",
+                "linear-gradient(to left, rgba(255,255,255,0) 0%, rgba(253,248,251,0.85) 100%)",
             }}
           />
         </FadeIn>

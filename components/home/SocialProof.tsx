@@ -9,7 +9,7 @@ const stats = [
 
 export default function SocialProof() {
   return (
-    <section className="bg-white overflow-hidden">
+    <section className="bg-transparent overflow-hidden">
 
       {/* Header — above the image, not overlaid */}
       <div className="max-w-7xl mx-auto px-6 md:px-10 pt-24 pb-10">
@@ -38,7 +38,7 @@ export default function SocialProof() {
             className="absolute bottom-0 inset-x-0 h-12 pointer-events-none z-10"
             style={{
               background:
-                "linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.6) 100%)",
+                "linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(253,248,251,0.6) 100%)",
             }}
           />
         </div>

@@ -11,7 +11,7 @@ const fadeUp = (delay = 0) => ({
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-stretch overflow-hidden bg-white">
+    <section className="relative min-h-screen flex items-stretch overflow-hidden bg-[#fdf8fb]">
 
       {/* Soft pink glow — left side behind text */}
       <div
@@ -80,7 +80,7 @@ export default function Hero() {
           className="absolute inset-y-0 left-0 w-24 z-10 pointer-events-none"
           style={{
             background:
-              "linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%)",
+              "linear-gradient(to right, rgba(253,248,251,1) 0%, rgba(255,255,255,0) 100%)",
           }}
         />
 

@@ -224,26 +224,43 @@ export default function AboutPage() {
       </section>
 
       {/* ── CTA ── */}
-      <section className="py-24 md:py-32 bg-black text-white text-center px-6">
-        <FadeIn>
-          <p className="text-xs tracking-[0.3em] uppercase text-gray-500 mb-5">
-            Ready?
-          </p>
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-8">
-            Book with Shawnie.
-          </h2>
-          <p className="text-gray-400 max-w-sm mx-auto mb-10 leading-relaxed">
-            Limited slots available. Secure your appointment before they're gone.
-          </p>
-          <Button
-            variant="primary"
-            href="https://shawnieholbrook.booksy.com"
-            target="_blank"
-            className="bg-white text-black hover:opacity-75"
-          >
-            Book Appointment
-          </Button>
-        </FadeIn>
+      <section className="relative py-24 md:py-32 text-center px-6 overflow-hidden border-t border-[#F472B6]/15">
+
+        {/* Soft pink radial glow */}
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            background:
+              "radial-gradient(ellipse at 50% 60%, rgba(244,114,182,0.08) 0%, transparent 70%)",
+          }}
+        />
+
+        <div className="relative z-10">
+          <FadeIn>
+            <p className="text-xs tracking-[0.3em] uppercase text-[#F472B6] mb-5">
+              Ready?
+            </p>
+          </FadeIn>
+          <FadeIn delay={0.1}>
+            <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-black mb-6 leading-tight">
+              Book with Shawnie.
+            </h2>
+          </FadeIn>
+          <FadeIn delay={0.2}>
+            <p className="text-gray-500 max-w-sm mx-auto mb-10 leading-relaxed">
+              Limited slots available. Secure your appointment before they're gone.
+            </p>
+          </FadeIn>
+          <FadeIn delay={0.3}>
+            <Button
+              variant="pink"
+              href="https://shawnieholbrook.booksy.com"
+              target="_blank"
+            >
+              Book Appointment
+            </Button>
+          </FadeIn>
+        </div>
       </section>
 
     </main>
