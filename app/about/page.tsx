@@ -102,63 +102,80 @@ export default function AboutPage() {
       </section>
 
       {/* ── BIO ── */}
-      <section className="py-24 md:py-32 border-t border-gray-100">
-        <div className="max-w-7xl mx-auto px-8 md:px-16 lg:px-24 grid md:grid-cols-2 gap-16 items-start">
+      <section className="py-24 md:py-28 border-t border-[#F472B6]/15">
+        <div className="max-w-7xl mx-auto px-8 md:px-16 lg:px-24">
+          <div className="grid md:grid-cols-[1fr_1.2fr] gap-16 items-start">
 
-          {/* Credentials */}
-          <FadeIn direction="right">
-            <div className="space-y-6">
-              {credentials.map((item, i) => (
-                <FadeIn key={item.label} delay={i * 0.08}>
-                  <div className="flex flex-col gap-1 border-b border-gray-100 pb-5">
-                    <p className="text-xs tracking-[0.2em] uppercase text-gray-400">
-                      {item.label}
-                    </p>
-                    <p className="text-base font-medium text-black">
-                      {item.value}
+            {/* Left — credentials, tighter and more compact */}
+            <FadeIn direction="right">
+              <p className="text-xs tracking-[0.3em] uppercase text-[#F472B6] mb-8">
+                The File
+              </p>
+              <div>
+                {credentials.map((item, i) => (
+                  <FadeIn key={item.label} delay={i * 0.07}>
+                    <div className="flex justify-between items-baseline gap-4 border-b border-gray-100 py-4">
+                      <p className="text-xs tracking-[0.15em] uppercase text-gray-400 shrink-0">
+                        {item.label}
+                      </p>
+                      <p className="text-sm font-medium text-black text-right">
+                        {item.value}
+                      </p>
+                    </div>
+                  </FadeIn>
+                ))}
+              </div>
+            </FadeIn>
+
+            {/* Right — bio, broken into digestible blocks */}
+            <div>
+              <FadeIn delay={0.1}>
+                <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-10 leading-tight">
+                  More than a stylist.<br />A whole movement.
+                </h2>
+              </FadeIn>
+
+              <div className="space-y-8">
+                <FadeIn delay={0.18}>
+                  <div className="border-l-2 border-[#F472B6]/30 pl-5">
+                    <p className="text-sm text-gray-500 leading-relaxed">
+                      Shawnie Holbrook is a loc specialist, entrepreneur, and educator
+                      who turned a deep love for natural hair into one of the most
+                      recognized brands in the loc community. Based in Lansing, Michigan
+                      on the campus of Michigan State University, she built her career
+                      from the ground up — chair by chair, client by client.
                     </p>
                   </div>
                 </FadeIn>
-              ))}
-            </div>
-          </FadeIn>
 
-          {/* Bio text */}
-          <div>
-            <FadeIn delay={0.1}>
-              <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-8 leading-tight">
-                More than a stylist.<br />A whole movement.
-              </h2>
-            </FadeIn>
-            <FadeIn delay={0.2}>
-              <div className="space-y-5 text-gray-500 leading-relaxed">
-                <p>
-                  Shawnie Holbrook is a loc specialist, entrepreneur, and educator
-                  who turned a deep love for natural hair into one of the most
-                  recognized brands in the loc community. Based in Lansing, Michigan
-                  on the campus of Michigan State University, Shawnie built her
-                  career from the ground up — chair by chair, client by client.
-                </p>
-                <p>
-                  What sets Shawnie apart isn't just her technique — it's her
-                  philosophy. She approaches every head of hair like a scientist:
-                  diagnosing, formulating, and executing with precision. No two
-                  clients are alike, and no two appointments are treated the same.
-                </p>
-                <p>
-                  In 2020 she founded Shawnie's Loc Lab, a brand that goes beyond
-                  the salon. From her growing product line to her podcast, her
-                  Twitch streams, and her educational content, Shawnie is building
-                  a full ecosystem around loc culture — one that educates,
-                  entertains, and empowers.
-                </p>
-                <p>
-                  She believes locs are more than a hairstyle. They're identity.
-                  They're legacy. And they deserve to be treated with the highest
-                  level of care and expertise.
-                </p>
+                <FadeIn delay={0.24}>
+                  <p className="text-sm text-gray-500 leading-relaxed">
+                    What sets Shawnie apart isn't just her technique — it's her
+                    philosophy. She approaches every head of hair like a scientist:
+                    diagnosing, formulating, and executing with precision. No two
+                    clients are alike, and no two appointments are treated the same.
+                  </p>
+                </FadeIn>
+
+                <FadeIn delay={0.30}>
+                  <p className="text-sm text-gray-500 leading-relaxed">
+                    In 2020 she founded Shawnie's Loc Lab — a brand that goes beyond
+                    the salon. From her growing product line to her podcast and Twitch
+                    streams, she's building a full ecosystem around loc culture that
+                    educates, entertains, and empowers.
+                  </p>
+                </FadeIn>
+
+                <FadeIn delay={0.36}>
+                  <p className="text-sm font-medium text-black leading-relaxed">
+                    She believes locs are more than a hairstyle. They're identity.
+                    They're legacy. And they deserve to be treated with the highest
+                    level of care and expertise.
+                  </p>
+                </FadeIn>
               </div>
-            </FadeIn>
+            </div>
+
           </div>
         </div>
       </section>
