@@ -21,10 +21,19 @@ const pillars = [
 
 export default function WhySection() {
   return (
-    <section className="py-24 md:py-32 bg-white">
-      <div className="max-w-7xl mx-auto px-6 md:px-10 grid md:grid-cols-2 gap-16 items-center">
-        {/* Image */}
-        <FadeIn direction="right" className="relative w-full aspect-[3/4] overflow-hidden bg-gray-50">
+    <section className="py-24 md:py-32 bg-white overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6 md:px-10 grid md:grid-cols-2 gap-8 md:gap-4 items-center">
+
+        {/* Image — editorial, blended */}
+        <FadeIn direction="right" className="relative w-full aspect-[3/4]">
+          {/* Pink glow behind subject */}
+          <div
+            className="absolute inset-0 z-0 pointer-events-none"
+            style={{
+              background:
+                "radial-gradient(ellipse at 50% 40%, rgba(244,114,182,0.12) 0%, rgba(255,255,255,0) 65%)",
+            }}
+          />
           <Image
             src="/images/shawnie/why-shawnie.jpeg"
             alt="Shawnie holding scissors — the craft behind the lab"
@@ -32,12 +41,28 @@ export default function WhySection() {
             className="object-cover object-top"
             sizes="(max-width: 768px) 100vw, 50vw"
           />
+          {/* Right-edge white fade — bleeds into text column */}
+          <div
+            className="absolute inset-y-0 right-0 w-24 pointer-events-none z-10"
+            style={{
+              background:
+                "linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%)",
+            }}
+          />
+          {/* Bottom fade */}
+          <div
+            className="absolute bottom-0 inset-x-0 h-24 pointer-events-none z-10"
+            style={{
+              background:
+                "linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%)",
+            }}
+          />
         </FadeIn>
 
         {/* Text Content */}
-        <div>
+        <div className="md:-ml-8 relative z-10">
           <FadeIn delay={0.1}>
-            <p className="text-xs tracking-[0.3em] uppercase text-gray-400 mb-5">
+            <p className="text-xs tracking-[0.3em] uppercase text-[#F472B6] mb-5">
               Why the Lab
             </p>
           </FadeIn>
@@ -58,7 +83,7 @@ export default function WhySection() {
             {pillars.map((pillar, i) => (
               <FadeIn key={pillar.label} delay={0.4 + i * 0.1}>
                 <div className="flex gap-5">
-                  <div className="w-px bg-black shrink-0 mt-1" />
+                  <div className="w-px bg-[#F472B6] shrink-0 mt-1" />
                   <div>
                     <p className="text-sm font-semibold tracking-widest uppercase text-black mb-1">
                       {pillar.label}
@@ -72,6 +97,7 @@ export default function WhySection() {
             ))}
           </div>
         </div>
+
       </div>
     </section>
   );
