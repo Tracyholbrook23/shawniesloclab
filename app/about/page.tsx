@@ -104,21 +104,21 @@ export default function AboutPage() {
       {/* ── BIO ── */}
       <section className="py-24 md:py-28 border-t border-[#F472B6]/15">
         <div className="max-w-7xl mx-auto px-8 md:px-16 lg:px-24">
-          <div className="grid md:grid-cols-[1fr_1.2fr] gap-16 items-start">
+          <div className="grid md:grid-cols-[1fr_1.3fr] gap-10 items-start">
 
-            {/* Left — credentials, tighter and more compact */}
+            {/* Left — credentials card */}
             <FadeIn direction="right">
-              <p className="text-xs tracking-[0.3em] uppercase text-[#F472B6] mb-8">
-                The File
-              </p>
-              <div>
+              <div className="bg-[#FCE7F3]/20 border border-[#F472B6]/10 px-7 py-8">
+                <p className="text-[10px] tracking-[0.35em] uppercase text-[#F472B6] mb-7">
+                  The File
+                </p>
                 {credentials.map((item, i) => (
-                  <FadeIn key={item.label} delay={i * 0.07}>
-                    <div className="flex justify-between items-baseline gap-4 border-b border-gray-100 py-4">
-                      <p className="text-xs tracking-[0.15em] uppercase text-gray-400 shrink-0">
+                  <FadeIn key={item.label} delay={i * 0.06}>
+                    <div className={`py-3.5 ${i < credentials.length - 1 ? "border-b border-[#F472B6]/10" : ""}`}>
+                      <p className="text-[10px] tracking-[0.2em] uppercase text-gray-400 mb-1">
                         {item.label}
                       </p>
-                      <p className="text-sm font-medium text-black text-right">
+                      <p className="text-sm font-semibold text-black leading-snug">
                         {item.value}
                       </p>
                     </div>
@@ -127,25 +127,23 @@ export default function AboutPage() {
               </div>
             </FadeIn>
 
-            {/* Right — bio, broken into digestible blocks */}
+            {/* Right — bio */}
             <div>
               <FadeIn delay={0.1}>
-                <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-10 leading-tight">
+                <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-8 leading-tight">
                   More than a stylist.<br />A whole movement.
                 </h2>
               </FadeIn>
 
-              <div className="space-y-8">
+              <div className="space-y-6">
                 <FadeIn delay={0.18}>
-                  <div className="border-l-2 border-[#F472B6]/30 pl-5">
-                    <p className="text-sm text-gray-500 leading-relaxed">
-                      Shawnie Holbrook is a loc specialist, entrepreneur, and educator
-                      who turned a deep love for natural hair into one of the most
-                      recognized brands in the loc community. Based in Lansing, Michigan
-                      on the campus of Michigan State University, she built her career
-                      from the ground up — chair by chair, client by client.
-                    </p>
-                  </div>
+                  <p className="text-sm text-gray-500 leading-relaxed">
+                    Shawnie Holbrook is a loc specialist, entrepreneur, and educator
+                    who turned a deep love for natural hair into one of the most
+                    recognized brands in the loc community. Based in Lansing, Michigan
+                    on the campus of Michigan State University, she built her career
+                    from the ground up — chair by chair, client by client.
+                  </p>
                 </FadeIn>
 
                 <FadeIn delay={0.24}>
@@ -167,11 +165,13 @@ export default function AboutPage() {
                 </FadeIn>
 
                 <FadeIn delay={0.36}>
-                  <p className="text-sm font-medium text-black leading-relaxed">
-                    She believes locs are more than a hairstyle. They're identity.
-                    They're legacy. And they deserve to be treated with the highest
-                    level of care and expertise.
-                  </p>
+                  <div className="border-t border-gray-100 pt-6 mt-2">
+                    <p className="text-sm font-semibold text-black leading-relaxed">
+                      She believes locs are more than a hairstyle. They're identity.
+                      They're legacy. And they deserve to be treated with the highest
+                      level of care and expertise.
+                    </p>
+                  </div>
                 </FadeIn>
               </div>
             </div>
