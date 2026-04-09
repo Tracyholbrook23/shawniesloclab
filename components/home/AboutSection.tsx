@@ -22,7 +22,8 @@ export default function AboutSection() {
           <FadeIn delay={0.3}>
             <div className="space-y-5 text-gray-500 leading-relaxed max-w-md">
               <p>
-                I'm a loc specialist, educator, and entrepreneur based in Atlanta, GA.
+                I'm a loc specialist, educator, and entrepreneur based in Lansing, Michigan —
+                right on the campus of Michigan State University.
                 What started as a passion for natural hair turned into a full-on
                 movement — one client, one loc, one formula at a time.
               </p>

@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 const credentials = [
   { label: "Specialty", value: "Loc Installation, Maintenance & Repair" },
   { label: "Experience", value: "7+ Years in Natural Hair Care" },
-  { label: "Based In", value: "Atlanta, GA" },
+  { label: "Based In", value: "Lansing, MI — Michigan State University" },
   { label: "Originally From", value: "Lansing, MI" },
   { label: "Also Known For", value: "Podcast Host · Streamer · Educator" },
 ];
@@ -88,9 +88,9 @@ export default function AboutPage() {
                 <p>
                   Shawnie Holbrook is a loc specialist, entrepreneur, and educator
                   who turned a deep love for natural hair into one of the most
-                  recognized brands in the loc community. Born and raised in
-                  Lansing, Michigan, Shawnie built her career from the ground up —
-                  chair by chair, client by client.
+                  recognized brands in the loc community. Based in Lansing, Michigan
+                  on the campus of Michigan State University, Shawnie built her
+                  career from the ground up — chair by chair, client by client.
                 </p>
                 <p>
                   What sets Shawnie apart isn't just her technique — it's her

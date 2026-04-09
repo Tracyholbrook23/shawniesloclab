@@ -30,7 +30,7 @@ export default function Footer() {
               Shawnie's Loc Lab
             </p>
             <p className="text-xs text-gray-500 leading-relaxed max-w-xs">
-              A full brand experience built around loc culture, hair science, and community. Est. Lansing, MI.
+              A full brand experience built around loc culture, hair science, and community. Based in Lansing, MI — Michigan State University.
             </p>
           </div>
 
