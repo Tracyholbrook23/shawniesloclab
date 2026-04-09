@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const navLinks = [
   { label: "Book", href: "https://shawnieholbrook.booksy.com", external: true },
-  { label: "Shop", href: "/shop", external: false },
+  { label: "Shop", href: "https://benable.com/i/R4E5C?utm_campaign=v1-0425&utm_content=807109&utm_medium=onboarding-profile-share&utm_source=ig", external: true },
   { label: "Podcast", href: "/podcast", external: false },
   { label: "Watch Live", href: "/watch", external: false },
   { label: "Library", href: "/library", external: false },
