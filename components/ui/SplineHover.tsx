@@ -25,7 +25,12 @@ export function SplineHover() {
         title="Interactive 3D scene"
         loading="lazy"
         className="w-full h-full"
-        style={{ display: "block", minHeight: "340px" }}
+        style={{
+          display: "block",
+          minHeight: "340px",
+          opacity: 0.55,
+          mixBlendMode: "multiply",
+        }}
       />
     </div>
   );

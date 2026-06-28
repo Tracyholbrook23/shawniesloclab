@@ -91,7 +91,7 @@ export default function Hero() {
         />
 
         {/* Left — Text */}
-        <div className="relative z-10 flex flex-col justify-center w-[52%] px-16 lg:px-24 py-0">
+        <div className="relative z-10 flex flex-col justify-center w-[52%] px-16 lg:px-24 py-0 pointer-events-auto">
           <motion.p {...fadeUp(0.1)} className="text-xs tracking-[0.35em] uppercase text-[#F472B6] mb-7">
             Est. Lansing, MI
           </motion.p>
@@ -124,14 +124,14 @@ export default function Hero() {
           </motion.div>
         </div>
 
-        {/* Right — Spline hover/scroll scene */}
+        {/* Right — Photo */}
         <motion.div
           initial={{ opacity: 0, x: 40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, delay: 0.15, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}
           className="absolute right-0 top-0 h-full w-[50%]"
         >
-          {/* Left-edge fade into page background */}
+          {/* Left-edge fade */}
           <div
             className="absolute inset-y-0 left-0 w-24 z-10 pointer-events-none"
             style={{
@@ -139,8 +139,28 @@ export default function Hero() {
                 "linear-gradient(to right, rgba(253,248,251,1) 0%, rgba(253,248,251,0) 100%)",
             }}
           />
-          <SplineHover />
+          {/* Pink glow */}
+          <div
+            className="absolute inset-0 z-0 pointer-events-none"
+            style={{
+              background:
+                "radial-gradient(ellipse at 60% 40%, rgba(244,114,182,0.10) 0%, rgba(253,248,251,0) 65%)",
+            }}
+          />
+          <Image
+            src="/images/shawnie/hero-shawnie.jpeg"
+            alt="Shawnie — Loc Lab founder"
+            fill
+            priority
+            className="object-cover object-top"
+            sizes="50vw"
+          />
         </motion.div>
+
+        {/* Spline overlay — sits above photo, below text/buttons */}
+        <div className="absolute inset-0 z-[5] pointer-events-none">
+          <SplineHover />
+        </div>
 
       </div>
 
