@@ -11,22 +11,30 @@ const fadeUp = (delay = 0) => ({
 
 export default function Hero() {
   return (
-    <section className="relative bg-[#fdf8fb] overflow-hidden">
+    <section className="relative bg-[#fdf8fb] overflow-hidden" style={{ isolation: "isolate" }}>
 
-      {/* Spline particle background */}
-      <div className="absolute inset-0 z-0">
+      {/* Spline particle background — clipped to hero only */}
+      <div className="absolute inset-0 z-0 overflow-hidden">
         <iframe
           src="https://my.spline.design/particleswithcolorshiftbackground-Grj0Qw7ODgs8UPHiOd9UrljB/"
           frameBorder="0"
           title="Particle background"
           loading="lazy"
-          className="w-full h-full"
-          style={{ display: "block", pointerEvents: "none" }}
+          style={{
+            display: "block",
+            pointerEvents: "none",
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            border: "none",
+          }}
         />
       </div>
 
       {/* ── MOBILE layout ── */}
-      <div className="md:hidden flex flex-col">
+      <div className="md:hidden flex flex-col relative z-10">
 
         {/* Image — full width, tall portrait crop */}
         <motion.div
@@ -36,14 +44,6 @@ export default function Hero() {
           className="relative w-full"
           style={{ height: "72vw", minHeight: 280, maxHeight: 480 }}
         >
-          {/* Bottom fade into blush */}
-          <div
-            className="absolute bottom-0 inset-x-0 h-16 z-10 pointer-events-none"
-            style={{
-              background:
-                "linear-gradient(to bottom, rgba(253,248,251,0) 0%, rgba(253,248,251,1) 100%)",
-            }}
-          />
           <Image
             src="/images/shawnie/hero-shawnie.jpeg"
             alt="Shawnie — Loc Lab founder"
@@ -90,19 +90,10 @@ export default function Hero() {
       </div>
 
       {/* ── DESKTOP layout ── */}
-      <div className="hidden md:flex relative min-h-screen items-stretch">
-
-        {/* Pink glow behind text */}
-        <div
-          className="absolute left-0 top-0 h-full w-[55%] pointer-events-none z-0"
-          style={{
-            background:
-              "radial-gradient(ellipse at 20% 50%, rgba(244,114,182,0.10) 0%, rgba(253,248,251,0) 70%)",
-          }}
-        />
+      <div className="hidden md:flex relative z-10 min-h-screen items-stretch">
 
         {/* Left — Text */}
-        <div className="relative z-10 flex flex-col justify-center w-[52%] px-16 lg:px-24 py-0 pointer-events-auto">
+        <div className="relative z-10 flex flex-col justify-center w-[52%] px-16 lg:px-24 py-0">
           <motion.p {...fadeUp(0.1)} className="text-xs tracking-[0.35em] uppercase text-[#F472B6] mb-7">
             Est. Lansing, MI
           </motion.p>
@@ -140,22 +131,13 @@ export default function Hero() {
           initial={{ opacity: 0, x: 40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, delay: 0.15, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}
-          className="absolute right-0 top-0 h-full w-[50%]"
+          className="absolute right-0 top-0 h-full w-[50%] z-10"
         >
-          {/* Left-edge fade */}
+          {/* Left-edge fade — blends photo into particle bg */}
           <div
-            className="absolute inset-y-0 left-0 w-24 z-10 pointer-events-none"
+            className="absolute inset-y-0 left-0 w-40 z-10 pointer-events-none"
             style={{
-              background:
-                "linear-gradient(to right, rgba(253,248,251,1) 0%, rgba(253,248,251,0) 100%)",
-            }}
-          />
-          {/* Pink glow */}
-          <div
-            className="absolute inset-0 z-0 pointer-events-none"
-            style={{
-              background:
-                "radial-gradient(ellipse at 60% 40%, rgba(244,114,182,0.10) 0%, rgba(253,248,251,0) 65%)",
+              background: "linear-gradient(to right, rgba(253,200,220,0.6) 0%, transparent 100%)",
             }}
           />
           <Image
@@ -168,8 +150,7 @@ export default function Hero() {
           />
         </motion.div>
 
-
-</div>
+      </div>
 
     </section>
   );
