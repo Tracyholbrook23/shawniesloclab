@@ -158,7 +158,7 @@ export default function Hero() {
         </motion.div>
 
         {/* Spline overlay — sits above photo, below text/buttons */}
-        <div className="absolute inset-0 z-[5] pointer-events-none">
+        <div className="absolute inset-0 z-[5]">
           <SplineHover />
         </div>
 
