@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import { PinkSlimeBackground } from "@/components/ui/PinkSlimeBackground";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,11 +31,15 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-[#fdf8fb] text-black">
+        {/* Pink slime interactive background — fixed, behind everything */}
+        <PinkSlimeBackground />
         {/* Soft pink border frame — fixed, sits above everything */}
         <div className="fixed inset-0 z-50 pointer-events-none border border-[#F472B6]/30" />
-        <Navbar />
-        {children}
-        <Footer />
+        <div className="relative z-10 flex flex-col min-h-full">
+          <Navbar />
+          {children}
+          <Footer />
+        </div>
       </body>
     </html>
   );
