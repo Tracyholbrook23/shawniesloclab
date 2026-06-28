@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { SplineHover } from "@/components/ui/SplineHover";
 
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 24 },
@@ -157,12 +156,8 @@ export default function Hero() {
           />
         </motion.div>
 
-        {/* Spline overlay — sits above photo, below text/buttons */}
-        <div className="absolute inset-0 z-[5]">
-          <SplineHover />
-        </div>
 
-      </div>
+</div>
 
     </section>
   );
