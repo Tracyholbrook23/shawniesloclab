@@ -13,6 +13,18 @@ export default function Hero() {
   return (
     <section className="relative bg-[#fdf8fb] overflow-hidden">
 
+      {/* Spline particle background */}
+      <div className="absolute inset-0 z-0">
+        <iframe
+          src="https://my.spline.design/particleswithcolorshiftbackground-Grj0Qw7ODgs8UPHiOd9UrljB/"
+          frameBorder="0"
+          title="Particle background"
+          loading="lazy"
+          className="w-full h-full"
+          style={{ display: "block", pointerEvents: "none" }}
+        />
+      </div>
+
       {/* ── MOBILE layout ── */}
       <div className="md:hidden flex flex-col">
 
