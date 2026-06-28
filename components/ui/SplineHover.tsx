@@ -20,7 +20,7 @@ export function SplineHover() {
       }}
     >
       <iframe
-        src="https://my.spline.design/v9tFwuNnCGYjHgHr/"
+        src="https://my.spline.design/hoverscrolleffect-pseGfAvU9gb35RZByAMYFDCP/"
         frameBorder="0"
         title="Interactive 3D scene"
         loading="lazy"
