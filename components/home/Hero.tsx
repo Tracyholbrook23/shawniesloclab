@@ -27,60 +27,28 @@ export default function Hero() {
         }}
       />
 
-      {/* Desktop button overlay */}
+      {/* Single invisible button overlay for all screen sizes */}
       <a
         href="https://shawnieholbrook.booksy.com"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Book Appointment"
-        className="hidden md:block"
         style={{
           position: "absolute",
           left: "50%",
-          top: "61%",
+          top: "58%",
           transform: "translateX(-50%)",
-          width: 260,
-          height: 64,
+          width: "clamp(200px, 40%, 300px)",
+          height: 70,
           borderRadius: 999,
           background: "transparent",
           cursor: "pointer",
           zIndex: 20,
           border: "none",
           outline: "none",
+          display: "block",
         }}
       />
-
-      {/* Mobile — real visible button pinned to bottom of hero */}
-      <a
-        href="https://shawnieholbrook.booksy.com"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="block md:hidden"
-        style={{
-          position: "absolute",
-          left: "50%",
-          bottom: "8%",
-          transform: "translateX(-50%)",
-          width: "70%",
-          maxWidth: 320,
-          height: 56,
-          borderRadius: 999,
-          background: "#000",
-          color: "#fff",
-          fontSize: 14,
-          fontWeight: 600,
-          letterSpacing: "0.08em",
-          textTransform: "uppercase",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          cursor: "pointer",
-          zIndex: 20,
-          textDecoration: "none",
-        }}
-      >
-        Book Appointment
-      </a>
 
     </section>
   );
