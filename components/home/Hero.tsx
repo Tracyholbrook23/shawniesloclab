@@ -17,7 +17,6 @@ export default function Hero() {
           height: "100%",
           border: "none",
           display: "block",
-          pointerEvents: "none",
         }}
       />
 
