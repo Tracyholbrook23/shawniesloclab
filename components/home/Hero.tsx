@@ -36,7 +36,7 @@ export default function Hero() {
         style={{
           position: "absolute",
           left: "50%",
-          top: "58%",
+          top: "48%",
           transform: "translateX(-50%)",
           width: "clamp(200px, 40%, 300px)",
           height: 70,
