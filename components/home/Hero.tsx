@@ -4,12 +4,19 @@ export default function Hero() {
   return (
     <section className="relative w-full" style={{ height: "100svh", minHeight: 500 }}>
 
+      <style>{`
+        @media (max-width: 767px) {
+          .spline-hero { pointer-events: none !important; }
+        }
+      `}</style>
+
       {/* Spline full-screen hero */}
       <iframe
         src="https://my.spline.design/creatorcafeheropage-hdLoPYXAvnsY5GrZAxOIb1El/"
         frameBorder="0"
         title="Shawnie's Loc Lab hero"
         loading="eager"
+        className="spline-hero"
         style={{
           position: "absolute",
           inset: 0,
