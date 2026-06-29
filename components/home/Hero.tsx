@@ -27,49 +27,49 @@ export default function Hero() {
         }}
       />
 
-      {/* Invisible button overlay — desktop */}
-      <div style={{ position: "absolute", inset: 0, zIndex: 10, pointerEvents: "none" }}>
-        <a
-          href="https://shawnieholbrook.booksy.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Book Appointment"
-          className="hidden md:block"
-          style={{
-            position: "absolute",
-            left: "50%",
-            top: "72%",
-            transform: "translateX(-50%)",
-            width: 240,
-            height: 60,
-            borderRadius: 999,
-            background: "transparent",
-            cursor: "pointer",
-            pointerEvents: "auto",
-          }}
-        />
+      {/* Desktop button overlay */}
+      <a
+        href="https://shawnieholbrook.booksy.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Book Appointment"
+        className="hidden md:block"
+        style={{
+          position: "absolute",
+          left: "50%",
+          top: "61%",
+          transform: "translateX(-50%)",
+          width: 260,
+          height: 64,
+          borderRadius: 999,
+          background: "transparent",
+          cursor: "pointer",
+          zIndex: 20,
+          border: "none",
+          outline: "none",
+        }}
+      />
 
-        {/* Mobile — Spline button shifts lower on small screens */}
-        <a
-          href="https://shawnieholbrook.booksy.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Book Appointment"
-          className="block md:hidden"
-          style={{
-            position: "absolute",
-            left: "50%",
-            top: "68%",
-            transform: "translateX(-50%)",
-            width: "70%",
-            height: 64,
-            borderRadius: 999,
-            background: "transparent",
-            cursor: "pointer",
-            pointerEvents: "auto",
-          }}
-        />
-      </div>
+      {/* Mobile button overlay */}
+      <a
+        href="https://shawnieholbrook.booksy.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Book Appointment"
+        className="block md:hidden"
+        style={{
+          position: "absolute",
+          left: "50%",
+          top: "68%",
+          transform: "translateX(-50%)",
+          width: "70%",
+          height: 64,
+          borderRadius: 999,
+          background: "transparent",
+          cursor: "pointer",
+          zIndex: 20,
+        }}
+      />
 
     </section>
   );
