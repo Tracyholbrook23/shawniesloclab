@@ -50,26 +50,37 @@ export default function Hero() {
         }}
       />
 
-      {/* Mobile button overlay */}
+      {/* Mobile — real visible button pinned to bottom of hero */}
       <a
         href="https://shawnieholbrook.booksy.com"
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Book Appointment"
         className="block md:hidden"
         style={{
           position: "absolute",
           left: "50%",
-          top: "68%",
+          bottom: "8%",
           transform: "translateX(-50%)",
           width: "70%",
-          height: 64,
+          maxWidth: 320,
+          height: 56,
           borderRadius: 999,
-          background: "transparent",
+          background: "#000",
+          color: "#fff",
+          fontSize: 14,
+          fontWeight: 600,
+          letterSpacing: "0.08em",
+          textTransform: "uppercase",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
           cursor: "pointer",
           zIndex: 20,
+          textDecoration: "none",
         }}
-      />
+      >
+        Book Appointment
+      </a>
 
     </section>
   );
