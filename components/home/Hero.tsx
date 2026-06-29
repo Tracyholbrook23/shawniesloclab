@@ -2,7 +2,7 @@
 
 export default function Hero() {
   return (
-    <section className="relative w-full" style={{ height: "100svh", minHeight: 600 }}>
+    <section className="relative w-full" style={{ height: "100svh", minHeight: 500 }}>
 
       {/* Spline full-screen hero */}
       <iframe
@@ -20,13 +20,14 @@ export default function Hero() {
         }}
       />
 
-      {/* Click-blocker layer — passes all clicks through EXCEPT over the button */}
+      {/* Invisible button overlay — desktop */}
       <div style={{ position: "absolute", inset: 0, zIndex: 10, pointerEvents: "none" }}>
         <a
           href="https://shawnieholbrook.booksy.com"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Book Appointment"
+          className="hidden md:block"
           style={{
             position: "absolute",
             left: "50%",
@@ -38,7 +39,27 @@ export default function Hero() {
             background: "transparent",
             cursor: "pointer",
             pointerEvents: "auto",
-            display: "block",
+          }}
+        />
+
+        {/* Mobile — Spline button shifts lower on small screens */}
+        <a
+          href="https://shawnieholbrook.booksy.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Book Appointment"
+          className="block md:hidden"
+          style={{
+            position: "absolute",
+            left: "50%",
+            top: "78%",
+            transform: "translateX(-50%)",
+            width: "70%",
+            height: 64,
+            borderRadius: 999,
+            background: "transparent",
+            cursor: "pointer",
+            pointerEvents: "auto",
           }}
         />
       </div>
