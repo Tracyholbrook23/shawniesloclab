@@ -52,7 +52,7 @@ export default function Hero() {
           style={{
             position: "absolute",
             left: "50%",
-            top: "78%",
+            top: "68%",
             transform: "translateX(-50%)",
             width: "70%",
             height: 64,
