@@ -32,6 +32,12 @@ yarn-error.log*
 
 # env files (can opt-in for committing if needed)
 .env*
+# ...except the checked-in template documenting which vars to set
+!.env.example
+
+# local dev fallback store for the /support goal tracker — see
+# lib/goalStore.ts. Not used once a Redis integration is configured.
+/.data/
 
 # vercel
 .vercel
