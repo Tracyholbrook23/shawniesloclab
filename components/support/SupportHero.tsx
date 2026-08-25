@@ -14,7 +14,7 @@ export default function SupportHero() {
         priority
         quality={90}
         className="object-cover"
-        style={{ objectPosition: "center 18%" }}
+        style={{ objectPosition: "center 8%" }}
         sizes="100vw"
       />
       <div
