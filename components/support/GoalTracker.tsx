@@ -118,8 +118,53 @@ export default function GoalTracker() {
 
   return (
     <section id="goal" className="py-[92px] bg-[#FCE7F1]">
-      <div className="max-w-7xl mx-auto px-6 md:px-10 grid md:grid-cols-2 gap-12 md:gap-14 items-center">
+      <div className="max-w-7xl mx-auto px-6 md:px-10 grid md:grid-cols-2 gap-12 md:gap-14 items-start">
         <div>
+          <FadeIn>
+            <p className="text-[#180D14] leading-relaxed mb-4">
+              Doing hair is so much more than a hobby to me. It&rsquo;s
+              something I take pride in, my creative outlet, and one of the
+              biggest ways I&rsquo;ve been able to build something of my
+              own. It means the world to me.
+            </p>
+          </FadeIn>
+          <FadeIn delay={0.06}>
+            <p className="text-[#180D14] leading-relaxed mb-4">
+              Through Shawnie&rsquo;s Loc Lab I&rsquo;ve had the privilege
+              to work with so many amazing people, grow in my craft and as
+              a business owner, and see just how far a professional career
+              in this industry could take me. Now I&rsquo;m ready to take
+              it to the next step.
+            </p>
+          </FadeIn>
+          <FadeIn delay={0.12}>
+            <p className="text-[#180D14] leading-relaxed mb-5">
+              Your support will help me invest in my education, which will
+              give me the ability to expand my skills, serve my clients
+              even better, and open doors to larger opportunities in the
+              beauty industry.
+            </p>
+          </FadeIn>
+          <FadeIn delay={0.18}>
+            <div className="bg-white border border-[#E0448E]/20 px-5 py-4 mb-6">
+              <p className="text-[#A81458] text-sm leading-relaxed font-medium m-0">
+                When you donate towards my education, you&rsquo;re not just
+                helping me pay for school, you&rsquo;re investing in my
+                future and my clients for years to come.
+              </p>
+            </div>
+          </FadeIn>
+          <FadeIn delay={0.24}>
+            <p className="italic text-[#180D14] text-lg m-0">
+              Thank you for believing in me!{" "}
+              <span aria-hidden="true">&#10084;</span>
+            </p>
+            <p className="italic text-[#8A7580] text-sm mt-1 mb-8">
+              — Shawnie
+            </p>
+          </FadeIn>
+
+          <div className="border-t border-[#E0448E]/15 pt-7">
           <FadeIn>
             <p className="text-xs tracking-[0.3em] uppercase text-[#A81458] font-bold mb-2.5">
               The Goal
@@ -153,6 +198,7 @@ export default function GoalTracker() {
               </p>
             </div>
           </FadeIn>
+          </div>
         </div>
 
         <FadeIn delay={0.1} className="bg-white border border-[#E0448E]/20 p-7 md:p-9">
