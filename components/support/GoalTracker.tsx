@@ -193,9 +193,6 @@ export default function GoalTracker() {
                   </span>
                 </div>
               </div>
-              <p className="text-xs text-[#8A7580] italic m-0">
-                *Application fee not included.
-              </p>
             </div>
           </FadeIn>
           </div>
