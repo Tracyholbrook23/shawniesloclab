@@ -73,7 +73,7 @@ export default function GalleryGrid() {
                     >
                       <Image
                         src={src}
-                        alt={`${cat.label} — Shawnie's Loc Lab`}
+                        alt={`${cat.label}, Shawnie's Loc Lab`}
                         fill
                         sizes="(max-width: 768px) 50vw, 25vw"
                         className="object-cover transition-transform duration-300 group-hover:scale-105"

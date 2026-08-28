@@ -16,7 +16,7 @@ export default function ClosingCta() {
         </FadeIn>
         <FadeIn delay={0.16}>
           <p className="text-[#6B5560] leading-relaxed mb-8">
-            Every gift — big or small — is a real step toward the chair
+            Every gift, big or small, is a real step toward the chair
             I&rsquo;m building. Thank you for being part of it.
           </p>
         </FadeIn>

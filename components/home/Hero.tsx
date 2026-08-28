@@ -54,7 +54,7 @@ export default function Hero() {
           >
             <Image
               src={slide.src}
-              alt="Shawnie — founder of Shawnie's Loc Lab"
+              alt="Shawnie, founder of Shawnie's Loc Lab"
               fill
               priority={i === 0}
               loading={i === 0 ? undefined : "eager"}
@@ -96,7 +96,7 @@ export default function Hero() {
           Real science. Real culture.
         </h1>
         <p className="text-base md:text-[17px] leading-relaxed text-white/80 max-w-md">
-          Loc and braid specialist — installs, maintenance, and repair from the lab in Lansing — plus the podcast, the stream, and the products built around loc life.
+          Loc and braid specialist: installs, maintenance, and repair from the lab in Lansing, plus the podcast, the stream, and the products built around loc life.
         </p>
         <div className="flex flex-wrap gap-3.5 mt-2">
           <a

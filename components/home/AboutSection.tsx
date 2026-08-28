@@ -33,16 +33,16 @@ export default function AboutSection() {
             <div className="space-y-4 text-[#6B5560] leading-relaxed max-w-sm">
               <p>
                 I'm a loc specialist, educator, and entrepreneur based in
-                Lansing, Michigan — right on the campus of Michigan State
+                Lansing, Michigan, right on the campus of Michigan State
                 University. What started as a passion for natural hair turned
-                into a full-on movement — one client, one loc, one formula
+                into a full-on movement, one client, one loc, one formula
                 at a time.
               </p>
               <p>
                 At Shawnie's Loc Lab, I combine technique with science to
                 deliver results that last. Every service is intentional.
                 Every product is tested. Every client leaves feeling like
-                themselves — just elevated.
+                themselves, just elevated.
               </p>
               <p>
                 Beyond the chair, I educate, I podcast, I stream, and I
@@ -73,7 +73,7 @@ export default function AboutSection() {
 
           <Image
             src="/images/shawnie/about-shawnie.jpeg"
-            alt="Shawnie — founder of Shawnie's Loc Lab"
+            alt="Shawnie, founder of Shawnie's Loc Lab"
             fill
             className="object-cover object-[center_15%]"
             sizes="(max-width: 768px) 100vw, 480px"

@@ -67,7 +67,7 @@ export default function Footer() {
               Shawnie's Loc Lab
             </p>
             <p className="text-[13px] text-white/55 leading-relaxed max-w-xs">
-              Loc care, hair science, and community — from the chair to the podcast to the shop. Based in Lansing, MI, on the campus of Michigan State University.
+              Loc care, hair science, and community, from the chair to the podcast to the shop. Based in Lansing, MI, on the campus of Michigan State University.
             </p>
             <div className="flex items-center gap-3.5 mt-5">
               {socials.map((s) => (
@@ -148,7 +148,7 @@ export default function Footer() {
 
             <p className="text-[11px] tracking-[0.2em] uppercase text-white/40 mb-[10px]">Location</p>
             <p className="text-[13px] text-white/60">
-              Lansing, MI — near MSU
+              Lansing, MI · near MSU
             </p>
           </div>
 

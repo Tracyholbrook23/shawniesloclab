@@ -54,7 +54,7 @@ export default function PodcastSection() {
           />
           <Image
             src="/images/shawnie/podcast-shawnie.jpeg"
-            alt="Shawnie — host of LOC'd Down at the Lab"
+            alt="Shawnie, host of LOC'd Down at the Lab"
             fill
             className="object-cover object-top"
             sizes="(max-width: 768px) 100vw, 50vw"

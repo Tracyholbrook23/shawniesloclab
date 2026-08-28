@@ -5,7 +5,7 @@ const pillars = [
   {
     label: "Precision",
     description:
-      "Every loc is treated with intention. No guesswork — just expert hands and proven technique.",
+      "Every loc is treated with intention. No guesswork, just expert hands and proven technique.",
   },
   {
     label: "Science",
@@ -15,7 +15,7 @@ const pillars = [
   {
     label: "Culture",
     description:
-      "Locs aren't just hair. They're identity, legacy, and art — and we treat them that way.",
+      "Locs aren't just hair. They're identity, legacy, and art, and we treat them that way.",
   },
 ];
 
@@ -36,7 +36,7 @@ export default function WhySection() {
           />
           <Image
             src="/images/shawnie/why-shawnie.jpeg"
-            alt="Shawnie holding scissors — the craft behind the lab"
+            alt="Shawnie holding scissors, the craft behind the lab"
             fill
             className="object-cover object-top"
             sizes="(max-width: 768px) 100vw, 50vw"

@@ -46,7 +46,7 @@ export default function FeaturedWork() {
                 {item.type === "image" ? (
                   <Image
                     src={item.src}
-                    alt={`${item.category} — Shawnie's Loc Lab`}
+                    alt={`${item.category}, Shawnie's Loc Lab`}
                     fill
                     sizes="(max-width: 768px) 256px, 25vw"
                     className="object-cover transition-transform duration-500 group-hover:scale-105"

@@ -32,7 +32,7 @@ const cards = [
       </svg>
     ),
     label: "Podcast",
-    description: "LOC'd Down at the Lab — real talk, every week.",
+    description: "LOC'd Down at the Lab: real talk, every week.",
     href: "/podcast",
     external: false,
     media: { type: "image" as const, src: "/images/shawnie/podcast-shawnie.jpeg", focus: "object-top" },

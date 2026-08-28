@@ -5,9 +5,9 @@ import { galleryImgPath, galleryVidPath } from "@/lib/galleryMedia";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Gallery — Shawnie's Loc Lab",
+  title: "Gallery · Shawnie's Loc Lab",
   description:
-    "Real client work from Shawnie's Loc Lab — stitch braids, barrel twists, regular retwists, and 2 strand twists.",
+    "Real client work from Shawnie's Loc Lab: stitch braids, barrel twists, regular retwists, and 2 strand twists.",
 };
 
 export default function GalleryPage() {
@@ -50,7 +50,7 @@ export default function GalleryPage() {
           </FadeIn>
           <FadeIn delay={0.2}>
             <p className="text-white/85 max-w-lg leading-relaxed text-lg">
-              Real installs, real clients, real results — straight from the lab.
+              Real installs, real clients, real results, straight from the lab.
             </p>
           </FadeIn>
         </div>

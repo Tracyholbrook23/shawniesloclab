@@ -5,7 +5,7 @@ const pillars = [
   {
     label: "Licensed & Credentialed",
     description:
-      "State licensure means every service in the lab is backed by real training — not just years in the chair.",
+      "State licensure means every service in the lab is backed by real training, not just years in the chair.",
   },
   {
     label: "One Stop For Clients",
@@ -26,7 +26,7 @@ export default function WhyItMatters() {
         <FadeIn direction="right" className="relative w-full aspect-[3/4]">
           <Image
             src="/images/shawnie/why-shawnie.jpeg"
-            alt="Shawnie at work — the craft behind the license"
+            alt="Shawnie at work, the craft behind the license"
             fill
             className="object-cover object-top"
             sizes="(max-width: 768px) 100vw, 50vw"
@@ -49,7 +49,7 @@ export default function WhyItMatters() {
           <FadeIn delay={0.26}>
             <p className="text-[#6B5560] leading-relaxed mb-9 max-w-md">
               A cosmetology license means I can legally expand what happens in
-              this chair — cuts, color, chemical services — without sending
+              this chair (cuts, color, chemical services) without sending
               clients elsewhere. It&rsquo;s the difference between &ldquo;loc
               specialist&rdquo; and full-service stylist, and it changes what
               this lab can become.

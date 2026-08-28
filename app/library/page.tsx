@@ -2,7 +2,7 @@ import FadeIn from "@/components/ui/FadeIn";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Loc Lab Library — Shawnie's Loc Lab",
+  title: "Loc Lab Library · Shawnie's Loc Lab",
   description:
     "E-books, guides, and digital products for loc lovers. Built by Shawnie. Backed by science.",
 };
@@ -16,7 +16,7 @@ const categories = [
       </svg>
     ),
     title: "E-Books",
-    description: "In-depth guides on loc installation, maintenance, and scalp health — written by Shawnie.",
+    description: "In-depth guides on loc installation, maintenance, and scalp health, written by Shawnie.",
   },
   {
     icon: (
@@ -58,7 +58,7 @@ export default function LibraryPage() {
         </FadeIn>
         <FadeIn delay={0.2}>
           <p className="text-[#6B5560] max-w-lg leading-relaxed text-lg">
-            E-books, guides, and digital tools built by Shawnie for loc wearers and locticians who want real knowledge — not generic advice. The Library is in the works — here&apos;s what&apos;s launching first.
+            E-books, guides, and digital tools built by Shawnie for loc wearers and locticians who want real knowledge, not generic advice. The Library is in the works, and here&apos;s what&apos;s launching first.
           </p>
         </FadeIn>
       </section>

@@ -14,7 +14,7 @@ export const SUPPORT_CURRENCY = "usd";
 // Shown on the Stripe checkout line item — keep it plain, not "donation"
 // (see the tax-disclaimer copy on the page itself for why).
 export const SUPPORT_PRODUCT_NAME =
-  "Contribution — Shawnie's Cosmetology Education";
+  "Contribution: Shawnie's Cosmetology Education";
 
 export interface PresetAmount {
   cents: number;

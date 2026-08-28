@@ -160,7 +160,7 @@ export default function GoalTracker() {
               <span aria-hidden="true">&#10084;</span>
             </p>
             <p className="italic text-[#8A7580] text-sm mt-1 mb-8">
-              — Shawnie
+              Shawnie
             </p>
           </FadeIn>
 
@@ -216,7 +216,7 @@ export default function GoalTracker() {
             <>
               {justDonated && (
                 <div className="mb-6 px-4 py-3 bg-[#FCE7F1] border border-[#E0448E]/25 text-sm text-[#A81458] font-semibold">
-                  Thank you! Your contribution is in — the total below
+                  Thank you! Your contribution is in. The total below
                   updates as soon as Stripe confirms it.
                 </div>
               )}
@@ -245,7 +245,7 @@ export default function GoalTracker() {
                 </p>
                 {goalError ? (
                   <p className="text-xs text-[#A81458] m-0">
-                    Couldn&rsquo;t load the live total — try refreshing.
+                    Couldn&rsquo;t load the live total. Try refreshing.
                   </p>
                 ) : (
                   <p className="text-xs text-[#8A7580] font-semibold m-0 flex items-center gap-1.5">
@@ -357,8 +357,8 @@ export default function GoalTracker() {
               </button>
 
               <p className="text-[11px] text-[#8A7580] mt-4 text-center">
-                You&rsquo;ll complete your contribution securely via Stripe
-                — no redirect required.
+                You&rsquo;ll complete your contribution securely via Stripe,
+                no redirect required.
               </p>
               <p className="text-[11px] text-[#8A7580] leading-relaxed mt-2 text-center">
                 Contributions are voluntary gifts toward Shawnie&rsquo;s

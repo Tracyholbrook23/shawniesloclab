@@ -28,7 +28,7 @@ export default function SocialProof() {
         <div className="relative w-full aspect-[16/8] md:aspect-[21/8]">
           <Image
             src="/images/shawnie/group-clients.jpeg"
-            alt="Shawnie and her clients — the Loc Lab crew"
+            alt="Shawnie and her clients, the Loc Lab crew"
             fill
             className="object-cover object-[center_26%]"
             sizes="100vw"

@@ -58,7 +58,7 @@ export default function SupporterWall() {
               <p className="text-sm text-white/70 leading-relaxed m-0">
                 {wall === null
                   ? "Loading…"
-                  : "No contributions yet — be the first to help write the next chapter."}
+                  : "No contributions yet. Be the first to help write the next chapter."}
               </p>
             </div>
           </FadeIn>

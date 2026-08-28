@@ -51,7 +51,7 @@ export default function ComingFromLabSection() {
               </p>
               <h3 className="text-[22px] font-extrabold mb-2.5">Loc Lab Library</h3>
               <p className="text-[13px] text-[#6B5560] leading-relaxed max-w-sm mb-5">
-                E-books, care guides, and digital tools for loc wearers and locticians — built by Shawnie.
+                E-books, care guides, and digital tools for loc wearers and locticians, built by Shawnie.
               </p>
               <a
                 href="/library"

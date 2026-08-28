@@ -45,7 +45,7 @@ export default function SupportHero() {
         </FadeIn>
         <FadeIn delay={0.16}>
           <p className="text-base md:text-[17px] leading-relaxed text-white/80 max-w-lg m-0">
-            I&rsquo;ve spent years building this lab around loc and braid work — but
+            I&rsquo;ve spent years building this lab around loc and braid work, but
             without a cosmetology license, there&rsquo;s a ceiling on what I can
             offer in the chair. Every contribution toward tuition gets me
             closer to a fuller menu, and a bigger future for this community.

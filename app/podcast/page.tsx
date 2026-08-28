@@ -2,9 +2,9 @@ import OrganicLoader from "@/components/ui/OrganicLoader";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Podcast — Shawnie's Loc Lab",
+  title: "Podcast · Shawnie's Loc Lab",
   description:
-    "LOC'd Down at the Lab — unfiltered conversations about loc care, hair health, business, and culture. Coming soon.",
+    "LOC'd Down at the Lab: unfiltered conversations about loc care, hair health, business, and culture. Coming soon.",
 };
 
 export default function PodcastPage() {
@@ -22,7 +22,7 @@ export default function PodcastPage() {
           Coming Soon
         </h1>
         <p className="text-sm md:text-base text-[#6B5560] max-w-md mx-auto leading-relaxed">
-          LOC&apos;d Down at the Lab is on its way — conversations about locs, culture, and everything in between.
+          LOC&apos;d Down at the Lab is on its way, with conversations about locs, culture, and everything in between.
         </p>
       </div>
     </main>

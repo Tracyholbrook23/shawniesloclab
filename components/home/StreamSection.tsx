@@ -48,7 +48,7 @@ export default function StreamSection() {
             <FadeIn delay={0.3}>
               <p className="text-gray-500 leading-relaxed mb-10 max-w-sm">
                 Come hang in the lab. Live hair sessions, product experiments,
-                community Q&As, and real conversations — unscripted every time.
+                community Q&As, and real conversations, unscripted every time.
               </p>
             </FadeIn>
             <FadeIn delay={0.4}>

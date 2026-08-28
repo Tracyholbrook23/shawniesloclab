@@ -32,7 +32,7 @@ export default function ProductSection() {
                 Coming Soon
               </p>
               <p className="text-sm text-gray-400 max-w-xs leading-relaxed">
-                The SLL product line is in development. Stay close — the formulas are almost ready.
+                The SLL product line is in development. Stay close. The formulas are almost ready.
               </p>
             </div>
             <Button

@@ -52,7 +52,7 @@ export default function SocialSection() {
                 <div className="relative aspect-square overflow-hidden bg-[#FCE7F1]/40 border border-[#E0448E]/20 group-hover:border-[#E0448E] group-hover:scale-105 group-hover:shadow-[0_8px_28px_rgba(224,68,142,0.18)] transition-all duration-300 ease-out">
                   <Image
                     src={post.src}
-                    alt={`${post.category} — Shawnie's Loc Lab on Instagram`}
+                    alt={`${post.category}, Shawnie's Loc Lab on Instagram`}
                     fill
                     sizes="(max-width: 768px) 176px, 16vw"
                     className="object-cover transition-transform duration-300 group-hover:scale-110"

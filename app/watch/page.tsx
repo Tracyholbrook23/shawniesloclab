@@ -2,7 +2,7 @@ import OrganicLoader from "@/components/ui/OrganicLoader";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Watch Live — Shawnie's Loc Lab",
+  title: "Watch Live · Shawnie's Loc Lab",
   description:
     "Live sessions, styling breakdowns, and behind-the-scenes at the lab on Twitch. Coming soon.",
 };
@@ -22,7 +22,7 @@ export default function WatchPage() {
           Coming Soon
         </h1>
         <p className="text-sm md:text-base text-white/65 max-w-md mx-auto leading-relaxed">
-          Live sessions, styling breakdowns, and behind-the-scenes at the lab — dropping soon.
+          Live sessions, styling breakdowns, and behind-the-scenes at the lab, dropping soon.
         </p>
       </div>
     </main>

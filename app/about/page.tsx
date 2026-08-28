@@ -4,15 +4,15 @@ import FadeIn from "@/components/ui/FadeIn";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About — Shawnie's Loc Lab",
+  title: "About · Shawnie's Loc Lab",
   description:
-    "Meet Shawnie — loc specialist, educator, entrepreneur, and founder of Shawnie's Loc Lab.",
+    "Meet Shawnie, loc specialist, educator, entrepreneur, and founder of Shawnie's Loc Lab.",
 };
 
 const credentials = [
   { label: "Specialty", value: "Loc Installation, Maintenance & Repair" },
   { label: "Experience", value: "7+ Years in Natural Hair Care" },
-  { label: "Based In", value: "Lansing, MI — Michigan State University" },
+  { label: "Based In", value: "Lansing, MI · Michigan State University" },
   { label: "Originally From", value: "Lansing, MI" },
   { label: "Also Known For", value: "Podcast Host · Streamer · Educator" },
 ];
@@ -28,7 +28,7 @@ export default function AboutPage() {
       >
         <Image
           src="/images/shawnie/about-hero.jpeg"
-          alt="Shawnie Holbrook — founder of Shawnie's Loc Lab"
+          alt="Shawnie Holbrook, founder of Shawnie's Loc Lab"
           fill
           priority
           className="object-cover object-top"
@@ -96,13 +96,13 @@ export default function AboutPage() {
                     who turned a deep love for natural hair into one of the most
                     recognized brands in the loc community. Based in Lansing, Michigan
                     on the campus of Michigan State University, she built her career
-                    from the ground up — chair by chair, client by client.
+                    from the ground up, chair by chair, client by client.
                   </p>
                 </FadeIn>
 
                 <FadeIn delay={0.24}>
                   <p className="text-sm text-[#6B5560] leading-relaxed">
-                    What sets Shawnie apart isn't just her technique — it's her
+                    What sets Shawnie apart isn't just her technique. It's her
                     philosophy. She approaches every head of hair like a scientist:
                     diagnosing, formulating, and executing with precision. No two
                     clients are alike, and no two appointments are treated the same.
@@ -111,7 +111,7 @@ export default function AboutPage() {
 
                 <FadeIn delay={0.30}>
                   <p className="text-sm text-[#6B5560] leading-relaxed">
-                    In 2020 she founded Shawnie's Loc Lab — a brand that goes beyond
+                    In 2020 she founded Shawnie's Loc Lab, a brand that goes beyond
                     the salon. From her growing product line to her podcast and Twitch
                     streams, she's building a full ecosystem around loc culture that
                     educates, entertains, and empowers.
@@ -150,7 +150,7 @@ export default function AboutPage() {
             </FadeIn>
             <FadeIn delay={0.1}>
               <p className="text-white/60 leading-relaxed md:max-w-sm md:ml-auto">
-                Shawnie operates across multiple spaces — the salon chair, the studio, the screen, and the shelf. Each one is intentional.
+                Shawnie operates across multiple spaces: the salon chair, the studio, the screen, and the shelf. Each one is intentional.
               </p>
             </FadeIn>
           </div>
@@ -160,7 +160,7 @@ export default function AboutPage() {
             {[
               {
                 title: "The Chair",
-                body: "Precision loc services — installation, maintenance, repair, and styling. Every appointment is an experience.",
+                body: "Precision loc services: installation, maintenance, repair, and styling. Every appointment is an experience.",
               },
               {
                 title: "The Shop",
@@ -172,7 +172,7 @@ export default function AboutPage() {
               },
               {
                 title: "The Stream",
-                body: "Live on Twitch — Q&As, behind-the-scenes, and community sessions you don't want to miss.",
+                body: "Live on Twitch: Q&As, behind-the-scenes, and community sessions you don't want to miss.",
               },
             ].map((item, i) => (
               <FadeIn key={item.title} delay={i * 0.08}>
