@@ -31,7 +31,7 @@ export default function WhySection() {
             className="absolute inset-0 z-0 pointer-events-none"
             style={{
               background:
-                "radial-gradient(ellipse at 50% 40%, rgba(244,114,182,0.12) 0%, rgba(255,255,255,0) 65%)",
+                "radial-gradient(ellipse at 50% 40%, rgba(224,68,142,0.12) 0%, rgba(255,255,255,0) 65%)",
             }}
           />
           <Image
@@ -46,7 +46,7 @@ export default function WhySection() {
             className="absolute inset-y-0 right-0 w-24 pointer-events-none z-10"
             style={{
               background:
-                "linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(253,248,251,1) 100%)",
+                "linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(251,243,248,1) 100%)",
             }}
           />
           {/* Bottom fade */}
@@ -54,7 +54,7 @@ export default function WhySection() {
             className="absolute bottom-0 inset-x-0 h-24 pointer-events-none z-10"
             style={{
               background:
-                "linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(253,248,251,1) 100%)",
+                "linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(251,243,248,1) 100%)",
             }}
           />
         </FadeIn>
@@ -62,17 +62,17 @@ export default function WhySection() {
         {/* Text Content */}
         <div className="md:-ml-8 relative z-10">
           <FadeIn delay={0.1}>
-            <p className="text-xs tracking-[0.3em] uppercase text-[#F472B6] mb-5">
+            <p className="text-xs tracking-[0.3em] uppercase text-[#E0448E] font-bold mb-5">
               Why the Lab
             </p>
           </FadeIn>
           <FadeIn delay={0.2}>
-            <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-black mb-8 leading-tight">
+            <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-[#180D14] mb-8 leading-tight">
               This isn't a salon.<br />It's a lab.
             </h2>
           </FadeIn>
           <FadeIn delay={0.3}>
-            <p className="text-gray-500 leading-relaxed mb-12 max-w-md">
+            <p className="text-[#6B5560] leading-relaxed mb-12 max-w-md">
               Shawnie's Loc Lab was built on the belief that natural hair care
               deserves the same precision and rigor as any science. Every
               appointment is a formula. Every result is by design.
@@ -83,12 +83,12 @@ export default function WhySection() {
             {pillars.map((pillar, i) => (
               <FadeIn key={pillar.label} delay={0.4 + i * 0.1}>
                 <div className="flex gap-5">
-                  <div className="w-px bg-[#F472B6] shrink-0 mt-1" />
+                  <div className="w-px bg-[#E0448E] shrink-0 mt-1" />
                   <div>
-                    <p className="text-sm font-semibold tracking-widest uppercase text-black mb-1">
+                    <p className="text-sm font-semibold tracking-widest uppercase text-[#180D14] mb-1">
                       {pillar.label}
                     </p>
-                    <p className="text-gray-500 text-sm leading-relaxed">
+                    <p className="text-[#6B5560] text-sm leading-relaxed">
                       {pillar.description}
                     </p>
                   </div>

@@ -15,6 +15,13 @@ export function PinkSlimeBackground() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
+    // Desktop-only effect: skip entirely on touch/mobile devices (no real
+    // mouse), so there's no stray pink bubble triggered by touch/scroll.
+    const isDesktopPointer =
+      typeof window !== "undefined" &&
+      window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+    if (!isDesktopPointer) return;
+
     const canvas = canvasRef.current;
     if (!canvas) return;
     const ctx = canvas.getContext("2d", { alpha: true });
@@ -169,18 +176,26 @@ export function PinkSlimeBackground() {
   }, []);
 
   return (
-    <canvas
-      ref={canvasRef}
-      aria-hidden="true"
-      style={{
-        position: "fixed",
-        inset: 0,
-        width: "100%",
-        height: "100%",
-        zIndex: 0,
-        pointerEvents: "none",
-        display: "block",
-      }}
-    />
+    <>
+      <style>{`
+        @media (max-width: 767px), (hover: none) and (pointer: coarse) {
+          .pink-slime-canvas { display: none !important; }
+        }
+      `}</style>
+      <canvas
+        ref={canvasRef}
+        aria-hidden="true"
+        className="pink-slime-canvas"
+        style={{
+          position: "fixed",
+          inset: 0,
+          width: "100%",
+          height: "100%",
+          zIndex: 0,
+          pointerEvents: "none",
+          display: "block",
+        }}
+      />
+    </>
   );
 }

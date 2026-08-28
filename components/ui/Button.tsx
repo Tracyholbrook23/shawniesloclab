@@ -1,4 +1,7 @@
+"use client";
+
 import React from "react";
+import { BOOKSY_URL, openBooksyWidget } from "@/lib/booksyWidget";
 
 type ButtonVariant = "primary" | "outline" | "pink";
 
@@ -15,29 +18,40 @@ export default function Button({
   target,
   children,
   className = "",
+  onClick,
   ...props
 }: ButtonProps) {
   const base =
     "inline-flex items-center justify-center px-7 py-3 rounded-full text-sm font-medium tracking-wide transition-all duration-200 cursor-pointer hover:scale-[1.02] active:scale-[0.97]";
 
   const variants: Record<ButtonVariant, string> = {
-    primary: "bg-black text-white hover:opacity-80 hover:shadow-[0_4px_16px_rgba(0,0,0,0.18)]",
-    outline: "border border-black text-black bg-transparent hover:bg-black hover:text-white hover:shadow-[0_4px_16px_rgba(0,0,0,0.12)]",
-    pink: "bg-[#F472B6] text-white hover:bg-[#DB2777] hover:shadow-[0_4px_20px_rgba(244,114,182,0.35)]",
+    primary: "bg-[#180D14] text-white hover:opacity-80 hover:shadow-[0_4px_16px_rgba(0,0,0,0.18)]",
+    outline: "border border-[#180D14] text-[#180D14] bg-transparent hover:bg-[#180D14] hover:text-white hover:shadow-[0_4px_16px_rgba(0,0,0,0.12)]",
+    pink: "bg-[#E0448E] text-white hover:bg-[#A81458] hover:shadow-[0_4px_20px_rgba(224,68,142,0.35)]",
   };
 
   const classes = `${base} ${variants[variant]} ${className}`;
 
   if (href) {
+    const isBooksy = href === BOOKSY_URL;
     return (
-      <a href={href} target={target} className={classes}>
+      <a
+        href={href}
+        target={target}
+        rel={target === "_blank" ? "noopener noreferrer" : undefined}
+        className={classes}
+        onClick={(e) => {
+          if (isBooksy) openBooksyWidget(e);
+          onClick?.(e as unknown as React.MouseEvent<HTMLButtonElement>);
+        }}
+      >
         {children}
       </a>
     );
   }
 
   return (
-    <button className={classes} {...props}>
+    <button className={classes} onClick={onClick} {...props}>
       {children}
     </button>
   );

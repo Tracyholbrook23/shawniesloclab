@@ -9,15 +9,15 @@ const stats = [
 
 export default function SocialProof() {
   return (
-    <section className="bg-transparent overflow-hidden">
+    <section className="bg-[#FCE7F1] overflow-hidden py-20">
 
       {/* Header — above the image, not overlaid */}
-      <div className="max-w-7xl mx-auto px-6 md:px-10 pt-24 pb-10">
+      <div className="max-w-7xl mx-auto px-6 md:px-10 pb-10">
         <FadeIn>
-          <p className="text-xs tracking-[0.3em] uppercase text-[#F472B6] mb-4">
+          <p className="text-xs tracking-[0.3em] uppercase text-[#A81458] font-bold mb-2.5">
             The Community
           </p>
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-black leading-tight max-w-lg">
+          <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-[#180D14] leading-tight max-w-lg">
             Built different.<br />Proven by results.
           </h2>
         </FadeIn>
@@ -30,7 +30,7 @@ export default function SocialProof() {
             src="/images/shawnie/group-clients.jpeg"
             alt="Shawnie and her clients — the Loc Lab crew"
             fill
-            className="object-cover object-center"
+            className="object-cover object-[center_26%]"
             sizes="100vw"
           />
           {/* Very subtle bottom-only fade — just enough to connect to stats */}
@@ -38,22 +38,22 @@ export default function SocialProof() {
             className="absolute bottom-0 inset-x-0 h-12 pointer-events-none z-10"
             style={{
               background:
-                "linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(253,248,251,0.6) 100%)",
+                "linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(252,231,241,0.6) 100%)",
             }}
           />
         </div>
       </FadeIn>
 
       {/* Stats Row */}
-      <div className="max-w-7xl mx-auto px-6 md:px-10 pb-24 pt-10">
-        <div className="grid grid-cols-3 gap-8 border-t border-gray-100 pt-12">
+      <div className="max-w-7xl mx-auto px-6 md:px-10 pt-10">
+        <div className="grid grid-cols-3 gap-8 border-t border-[#E0448E]/20 pt-8">
           {stats.map((stat, i) => (
             <FadeIn key={stat.label} delay={0.1 * i}>
               <div>
-                <p className="text-4xl md:text-5xl font-bold text-black mb-2">
+                <p className="text-4xl md:text-5xl font-extrabold text-[#180D14] mb-1.5">
                   {stat.value}
                 </p>
-                <p className="text-xs tracking-widest uppercase text-gray-400">
+                <p className="text-[11px] tracking-[0.15em] uppercase text-[#8A7580]">
                   {stat.label}
                 </p>
               </div>

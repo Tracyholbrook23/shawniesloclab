@@ -11,7 +11,7 @@ export default function AboutSection() {
         className="absolute inset-y-0 left-0 w-full md:w-[55%] pointer-events-none z-0"
         style={{
           background:
-            "radial-gradient(ellipse at 15% 50%, rgba(244,114,182,0.07) 0%, rgba(255,255,255,0) 70%)",
+            "radial-gradient(ellipse at 15% 50%, rgba(224,68,142,0.07) 0%, rgba(255,255,255,0) 70%)",
         }}
       />
 
@@ -20,17 +20,17 @@ export default function AboutSection() {
         {/* Text Content */}
         <div className="md:pr-8">
           <FadeIn delay={0.1}>
-            <p className="text-xs tracking-[0.3em] uppercase text-[#F472B6] mb-4">
+            <p className="text-xs tracking-[0.3em] uppercase text-[#E0448E] font-bold mb-4">
               Meet the Founder
             </p>
           </FadeIn>
           <FadeIn delay={0.2}>
-            <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-black leading-tight mb-6">
+            <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-[#180D14] leading-tight mb-6">
               Hi, I'm Shawnie.
             </h2>
           </FadeIn>
           <FadeIn delay={0.3}>
-            <div className="space-y-4 text-gray-500 leading-relaxed max-w-sm">
+            <div className="space-y-4 text-[#6B5560] leading-relaxed max-w-sm">
               <p>
                 I'm a loc specialist, educator, and entrepreneur based in
                 Lansing, Michigan — right on the campus of Michigan State
@@ -67,7 +67,7 @@ export default function AboutSection() {
             className="absolute inset-0 z-0 pointer-events-none"
             style={{
               background:
-                "radial-gradient(ellipse at 55% 30%, rgba(244,114,182,0.10) 0%, rgba(255,255,255,0) 55%)",
+                "radial-gradient(ellipse at 55% 30%, rgba(224,68,142,0.10) 0%, rgba(255,255,255,0) 55%)",
             }}
           />
 
@@ -84,7 +84,7 @@ export default function AboutSection() {
             className="absolute inset-y-0 left-0 w-14 pointer-events-none z-10"
             style={{
               background:
-                "linear-gradient(to left, rgba(255,255,255,0) 0%, rgba(253,248,251,0.85) 100%)",
+                "linear-gradient(to left, rgba(255,255,255,0) 0%, rgba(251,243,248,0.85) 100%)",
             }}
           />
         </FadeIn>

@@ -19,106 +19,60 @@ const credentials = [
 
 export default function AboutPage() {
   return (
-    <main className="bg-transparent text-black">
+    <main className="bg-transparent text-[#180D14]">
 
-      {/* ── HERO ── */}
-      <section className="relative min-h-[80vh] flex items-center overflow-hidden">
-
-        {/* Soft pink glow — anchored center-left */}
+      {/* ── HERO — full-bleed photo, text anchored bottom-left ── */}
+      <section
+        className="relative flex items-end overflow-hidden"
+        style={{ minHeight: 460, height: "60vh" }}
+      >
+        <Image
+          src="/images/shawnie/about-hero.jpeg"
+          alt="Shawnie Holbrook — founder of Shawnie's Loc Lab"
+          fill
+          priority
+          className="object-cover object-top"
+          sizes="100vw"
+        />
         <div
-          className="absolute left-0 top-0 h-full w-[60%] pointer-events-none z-0"
+          className="absolute inset-0"
           style={{
             background:
-              "radial-gradient(ellipse at 20% 50%, rgba(244,114,182,0.08) 0%, rgba(253,248,251,0) 65%)",
+              "linear-gradient(0deg, rgba(27,15,22,0.85) 0%, rgba(27,15,22,0.1) 55%)",
           }}
         />
-
-        {/* Layout: text left, image right — tighter columns */}
-        <div className="relative z-10 w-full grid md:grid-cols-[1fr_480px] lg:grid-cols-[1fr_540px] items-center gap-0">
-
-          {/* Left — Text, vertically centered */}
-          <div className="px-8 md:px-16 lg:px-24 py-16">
-            <FadeIn delay={0.1}>
-              <p className="text-xs tracking-[0.3em] uppercase text-[#F472B6] mb-5">
-                The Founder
-              </p>
-            </FadeIn>
-            <FadeIn delay={0.2}>
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-none">
-                Shawnie<br />Holbrook
-              </h1>
-            </FadeIn>
-          </div>
-
-          {/* Right — Image column, bleeds to edge */}
-          <div className="relative hidden md:block h-[80vh]">
-            {/* Left-edge fade — pulls image into text */}
-            <div
-              className="absolute inset-y-0 left-0 w-20 z-10 pointer-events-none"
-              style={{
-                background:
-                  "linear-gradient(to right, rgba(253,248,251,1) 0%, rgba(253,248,251,0) 100%)",
-              }}
-            />
-            {/* Subtle bottom whisper — barely there */}
-            <div
-              className="absolute bottom-0 inset-x-0 h-10 z-10 pointer-events-none"
-              style={{
-                background:
-                  "linear-gradient(to bottom, rgba(253,248,251,0) 0%, rgba(253,248,251,0.4) 100%)",
-              }}
-            />
-            {/* Pink glow */}
-            <div
-              className="absolute inset-0 z-0 pointer-events-none"
-              style={{
-                background:
-                  "radial-gradient(ellipse at 55% 30%, rgba(244,114,182,0.08) 0%, rgba(253,248,251,0) 55%)",
-              }}
-            />
-            <Image
-              src="/images/shawnie/about-hero.jpeg"
-              alt="Shawnie Holbrook — founder of Shawnie's Loc Lab"
-              fill
-              priority
-              className="object-cover object-top"
-              sizes="540px"
-            />
-          </div>
+        <div className="relative z-10 max-w-7xl mx-auto w-full px-6 md:px-10 pb-12">
+          <FadeIn delay={0.1}>
+            <p className="text-xs tracking-[0.3em] uppercase text-[#F0A8CE] mb-3.5 font-bold">
+              The Founder
+            </p>
+          </FadeIn>
+          <FadeIn delay={0.2}>
+            <h1 className="text-[44px] md:text-[62px] font-extrabold tracking-tight text-white leading-[1.02]">
+              Shawnie Holbrook
+            </h1>
+          </FadeIn>
         </div>
-
-        {/* Mobile image */}
-        <div className="md:hidden absolute inset-0 z-0 opacity-20">
-          <Image
-            src="/images/shawnie/about-hero.jpeg"
-            alt="Shawnie Holbrook — founder of Shawnie's Loc Lab"
-            fill
-            priority
-            className="object-cover object-top"
-            sizes="100vw"
-          />
-        </div>
-
       </section>
 
       {/* ── BIO ── */}
-      <section className="py-24 md:py-28 border-t border-[#F472B6]/15">
+      <section className="py-24 md:py-28 border-t border-[#E0448E]/15">
         <div className="max-w-7xl mx-auto px-8 md:px-16 lg:px-24">
           <div className="grid md:grid-cols-[1fr_1.3fr] gap-10 items-start">
 
             {/* Left — credentials card */}
             <FadeIn direction="right">
-              <div className="bg-[#FCE7F3]/20 border border-[#F472B6]/10 px-7 py-8">
-                <p className="text-[10px] tracking-[0.35em] uppercase text-[#F472B6] mb-7">
+              <div className="bg-[#FCE7F1]/20 border border-[#E0448E]/10 px-7 py-8">
+                <p className="text-[10px] tracking-[0.35em] uppercase text-[#E0448E] mb-7">
                   The File
                 </p>
                 {credentials.map((item, i) => (
                   <FadeIn key={item.label} delay={i * 0.06}>
-                    <div className={`py-3.5 ${i < credentials.length - 1 ? "border-b border-[#F472B6]/10" : ""}`}>
-                      <p className="text-[10px] tracking-[0.2em] uppercase text-gray-400 mb-1">
+                    <div className={`py-3.5 ${i < credentials.length - 1 ? "border-b border-[#E0448E]/10" : ""}`}>
+                      <p className="text-[10px] tracking-[0.2em] uppercase text-[#8A7580] mb-1">
                         {item.label}
                       </p>
-                      <p className="text-sm font-semibold text-black leading-snug">
+                      <p className="text-sm font-semibold text-[#180D14] leading-snug">
                         {item.value}
                       </p>
                     </div>
@@ -130,14 +84,14 @@ export default function AboutPage() {
             {/* Right — bio */}
             <div>
               <FadeIn delay={0.1}>
-                <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-8 leading-tight">
+                <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight mb-8 leading-tight">
                   More than a stylist.<br />A whole movement.
                 </h2>
               </FadeIn>
 
               <div className="space-y-6">
                 <FadeIn delay={0.18}>
-                  <p className="text-sm text-gray-500 leading-relaxed">
+                  <p className="text-sm text-[#6B5560] leading-relaxed">
                     Shawnie Holbrook is a loc specialist, entrepreneur, and educator
                     who turned a deep love for natural hair into one of the most
                     recognized brands in the loc community. Based in Lansing, Michigan
@@ -147,7 +101,7 @@ export default function AboutPage() {
                 </FadeIn>
 
                 <FadeIn delay={0.24}>
-                  <p className="text-sm text-gray-500 leading-relaxed">
+                  <p className="text-sm text-[#6B5560] leading-relaxed">
                     What sets Shawnie apart isn't just her technique — it's her
                     philosophy. She approaches every head of hair like a scientist:
                     diagnosing, formulating, and executing with precision. No two
@@ -156,7 +110,7 @@ export default function AboutPage() {
                 </FadeIn>
 
                 <FadeIn delay={0.30}>
-                  <p className="text-sm text-gray-500 leading-relaxed">
+                  <p className="text-sm text-[#6B5560] leading-relaxed">
                     In 2020 she founded Shawnie's Loc Lab — a brand that goes beyond
                     the salon. From her growing product line to her podcast and Twitch
                     streams, she's building a full ecosystem around loc culture that
@@ -166,7 +120,7 @@ export default function AboutPage() {
 
                 <FadeIn delay={0.36}>
                   <div className="border-t border-gray-100 pt-6 mt-2">
-                    <p className="text-sm font-semibold text-black leading-relaxed">
+                    <p className="text-sm font-semibold text-[#180D14] leading-relaxed">
                       She believes locs are more than a hairstyle. They're identity.
                       They're legacy. And they deserve to be treated with the highest
                       level of care and expertise.
@@ -181,28 +135,28 @@ export default function AboutPage() {
       </section>
 
       {/* ── WHAT SHE DOES ── */}
-      <section className="py-24 md:py-32 border-t border-[#F472B6]/15">
+      <section className="py-24 md:py-32 bg-[#1B0F16] text-white">
         <div className="max-w-7xl mx-auto px-8 md:px-16 lg:px-24">
 
           {/* Header */}
           <div className="grid md:grid-cols-2 gap-6 mb-16 items-end">
             <FadeIn>
-              <p className="text-xs tracking-[0.3em] uppercase text-[#F472B6] mb-4">
+              <p className="text-xs tracking-[0.3em] uppercase text-[#F0A8CE] mb-4 font-bold">
                 What She Does
               </p>
-              <h2 className="text-4xl md:text-5xl font-bold tracking-tight leading-tight">
+              <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight leading-tight">
                 The lab has<br />many rooms.
               </h2>
             </FadeIn>
             <FadeIn delay={0.1}>
-              <p className="text-gray-500 leading-relaxed md:max-w-sm md:ml-auto">
+              <p className="text-white/60 leading-relaxed md:max-w-sm md:ml-auto">
                 Shawnie operates across multiple spaces — the salon chair, the studio, the screen, and the shelf. Each one is intentional.
               </p>
             </FadeIn>
           </div>
 
           {/* Pillars — horizontal rule layout */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-[#F472B6]/10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-white/10">
             {[
               {
                 title: "The Chair",
@@ -222,14 +176,14 @@ export default function AboutPage() {
               },
             ].map((item, i) => (
               <FadeIn key={item.title} delay={i * 0.08}>
-                <div className="bg-[#fdf8fb] p-8 h-full">
-                  <p className="text-xs tracking-[0.25em] uppercase text-[#F472B6] mb-4">
+                <div className="bg-[#1B0F16] p-8 h-full">
+                  <p className="text-[11px] tracking-[0.2em] uppercase text-[#F0A8CE] font-bold mb-4">
                     0{i + 1}
                   </p>
-                  <p className="text-sm font-semibold tracking-widest uppercase text-black mb-3">
+                  <p className="text-sm font-bold tracking-widest uppercase mb-3">
                     {item.title}
                   </p>
-                  <p className="text-sm text-gray-500 leading-relaxed">
+                  <p className="text-sm text-white/60 leading-relaxed">
                     {item.body}
                   </p>
                 </div>
@@ -240,30 +194,30 @@ export default function AboutPage() {
       </section>
 
       {/* ── CTA ── */}
-      <section className="relative py-24 md:py-32 text-center px-6 overflow-hidden border-t border-[#F472B6]/15">
+      <section className="relative py-24 md:py-32 text-center px-6 overflow-hidden border-t border-[#E0448E]/15">
 
         {/* Soft pink radial glow */}
         <div
           className="absolute inset-0 pointer-events-none"
           style={{
             background:
-              "radial-gradient(ellipse at 50% 60%, rgba(244,114,182,0.08) 0%, transparent 70%)",
+              "radial-gradient(ellipse at 50% 60%, rgba(224,68,142,0.08) 0%, transparent 70%)",
           }}
         />
 
         <div className="relative z-10">
           <FadeIn>
-            <p className="text-xs tracking-[0.3em] uppercase text-[#F472B6] mb-5">
+            <p className="text-xs tracking-[0.3em] uppercase text-[#E0448E] font-bold mb-5">
               Ready?
             </p>
           </FadeIn>
           <FadeIn delay={0.1}>
-            <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-black mb-6 leading-tight">
+            <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-[#180D14] mb-6 leading-tight">
               Book with Shawnie.
             </h2>
           </FadeIn>
           <FadeIn delay={0.2}>
-            <p className="text-gray-500 max-w-sm mx-auto mb-10 leading-relaxed">
+            <p className="text-[#6B5560] max-w-sm mx-auto mb-10 leading-relaxed">
               Limited slots available. Secure your appointment before they're gone.
             </p>
           </FadeIn>
