@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import SupportHero from "@/components/support/SupportHero";
+import MyStory from "@/components/support/MyStory";
 import GoalTracker from "@/components/support/GoalTracker";
 import WhyItMatters from "@/components/support/WhyItMatters";
 import SupporterWall from "@/components/support/SupporterWall";
@@ -15,6 +16,7 @@ export default function SupportPage() {
   return (
     <main>
       <SupportHero />
+      <MyStory />
       <GoalTracker />
       <WhyItMatters />
       <SupporterWall />

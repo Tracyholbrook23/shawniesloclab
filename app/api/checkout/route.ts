@@ -52,17 +52,21 @@ export async function POST(req: NextRequest) {
       ],
       // Optional name + note, shown on the Supporter Wall after payment.
       // Neither is a good/service in exchange for the contribution — see
-      // the disclaimer copy on the page itself.
+      // the disclaimer copy on the page itself. Stripe marks `optional`
+      // fields as "(optional)" in the Checkout UI automatically, and it
+      // also echoes these labels verbatim into the payment receipt email
+      // — so keep them short and receipt-friendly rather than writing
+      // full sentences here.
       custom_fields: [
         {
           key: "supporter_name",
-          label: { type: "custom", custom: "Name (optional — shown on the site)" },
+          label: { type: "custom", custom: "Display name" },
           type: "text",
           optional: true,
         },
         {
           key: "supporter_message",
-          label: { type: "custom", custom: "Short message (optional)" },
+          label: { type: "custom", custom: "Message" },
           type: "text",
           optional: true,
           text: { maximum_length: 140 },

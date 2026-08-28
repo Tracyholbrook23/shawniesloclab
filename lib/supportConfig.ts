@@ -20,16 +20,37 @@ export interface PresetAmount {
   cents: number;
   amountLabel: string;
   perkLabel: string;
+  description: string;
 }
 
 // Lab-branded preset amounts. These are just labels, not purchases or
 // reward tiers — nothing is promised in exchange for any amount, which
 // keeps these plain gifts rather than payment for goods/services.
 export const PRESET_AMOUNTS: PresetAmount[] = [
-  { cents: 500, amountLabel: "$5", perkLabel: "Add a Drop" },
-  { cents: 2_500, amountLabel: "$25", perkLabel: "Fuel the Formula" },
-  { cents: 5_000, amountLabel: "$50", perkLabel: "Invest in the Lab" },
-  { cents: 10_000, amountLabel: "$100", perkLabel: "Help Build the Future" },
+  {
+    cents: 500,
+    amountLabel: "$5",
+    perkLabel: "Just to Drop",
+    description: "Every drop makes a difference.",
+  },
+  {
+    cents: 2_500,
+    amountLabel: "$25",
+    perkLabel: "Fuel the Formula",
+    description: "Provide the fuel to keep the dream in motion.",
+  },
+  {
+    cents: 5_000,
+    amountLabel: "$50",
+    perkLabel: "Invest in the Lab",
+    description: "Give towards the future.",
+  },
+  {
+    cents: 10_000,
+    amountLabel: "$100",
+    perkLabel: "Build the Future",
+    description: "Help the legacy.",
+  },
 ];
 
 // "Other amount" input bounds — a friendly floor above Stripe's ~$0.50

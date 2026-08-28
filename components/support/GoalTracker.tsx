@@ -131,11 +131,27 @@ export default function GoalTracker() {
             </h2>
           </FadeIn>
           <FadeIn delay={0.16}>
-            <p className="text-sm text-[#6B5560] leading-relaxed max-w-md m-0">
-              Tuition, kit fees, and state board exam costs — laid out
-              honestly, funded together. Anything raised beyond the goal
-              goes straight toward continuing education for the lab.
-            </p>
+            <div className="max-w-md">
+              <div className="flex flex-col gap-2 mb-3">
+                <div className="flex items-baseline justify-between border-b border-[#E0448E]/15 pb-2">
+                  <span className="text-base font-extrabold text-[#180D14]">
+                    $24,000
+                  </span>
+                  <span className="text-sm text-[#6B5560]">Tuition</span>
+                </div>
+                <div className="flex items-baseline justify-between border-b border-[#E0448E]/15 pb-2">
+                  <span className="text-base font-extrabold text-[#180D14]">
+                    $2,600
+                  </span>
+                  <span className="text-sm text-[#6B5560]">
+                    Professional Student Kit
+                  </span>
+                </div>
+              </div>
+              <p className="text-xs text-[#8A7580] italic m-0">
+                *Application fee not included.
+              </p>
+            </div>
           </FadeIn>
         </div>
 
@@ -184,15 +200,22 @@ export default function GoalTracker() {
                     ? `${goal.supporterCount} Supporter${goal.supporterCount === 1 ? "" : "s"}`
                     : "—"}
                 </p>
-                {goalError && (
+                {goalError ? (
                   <p className="text-xs text-[#A81458] m-0">
                     Couldn&rsquo;t load the live total — try refreshing.
+                  </p>
+                ) : (
+                  <p className="text-xs text-[#8A7580] font-semibold m-0 flex items-center gap-1.5">
+                    <span aria-hidden="true" className="text-[#E0448E]">
+                      &#10084;
+                    </span>
+                    Every contribution helps!
                   </p>
                 )}
               </div>
 
-              <p className="text-xs tracking-[0.15em] uppercase text-[#8A7580] font-bold mb-3">
-                Choose an amount
+              <p className="text-xs tracking-[0.15em] uppercase text-[#A81458] font-bold mb-3">
+                Choose How You&rsquo;ll Make an Impact
               </p>
               <div className="grid grid-cols-2 gap-2.5 mb-3">
                 {PRESET_AMOUNTS.map((preset) => {
@@ -217,10 +240,17 @@ export default function GoalTracker() {
                       </span>
                       <span
                         className={`block text-[11px] tracking-wide uppercase font-semibold ${
-                          active ? "text-white/80" : "text-[#8A7580]"
+                          active ? "text-white/80" : "text-[#A81458]"
                         }`}
                       >
                         {preset.perkLabel}
+                      </span>
+                      <span
+                        className={`block text-[11px] leading-snug normal-case font-normal mt-1 ${
+                          active ? "text-white/70" : "text-[#8A7580]"
+                        }`}
+                      >
+                        {preset.description}
                       </span>
                     </button>
                   );
@@ -247,7 +277,7 @@ export default function GoalTracker() {
                     max={MAX_CUSTOM_CENTS / 100}
                     step="1"
                     inputMode="decimal"
-                    placeholder="0"
+                    placeholder="Enter any amount"
                     value={customAmount}
                     onFocus={() => setUsingCustom(true)}
                     onChange={(e) => {
@@ -270,18 +300,35 @@ export default function GoalTracker() {
                 type="button"
                 onClick={startCheckout}
                 disabled={startingCheckout}
-                className="w-full flex items-center justify-center px-[30px] py-4 bg-[#E0448E] text-white rounded-full text-[13px] font-bold tracking-[0.08em] uppercase hover:bg-[#A81458] transition-colors duration-200 disabled:opacity-60 disabled:cursor-not-allowed"
+                className="w-full flex items-center justify-center gap-2 px-[30px] py-4 bg-[#E0448E] text-white rounded-full text-[13px] font-bold tracking-[0.08em] uppercase hover:bg-[#A81458] transition-colors duration-200 disabled:opacity-60 disabled:cursor-not-allowed"
                 style={{ boxShadow: "0 8px 24px rgba(224,68,142,0.3)" }}
               >
-                {startingCheckout ? "Loading secure checkout…" : "Donate Now"}
+                {startingCheckout ? (
+                  "Loading secure checkout…"
+                ) : (
+                  <>
+                    <span aria-hidden="true">&#10084;</span>
+                    Support My Education
+                  </>
+                )}
               </button>
 
-              <p className="text-[11px] text-[#8A7580] leading-relaxed mt-4 text-center">
+              <p className="text-[11px] text-[#8A7580] mt-4 text-center">
+                You&rsquo;ll complete your contribution securely via Stripe
+                — no redirect required.
+              </p>
+              <p className="text-[11px] text-[#8A7580] leading-relaxed mt-2 text-center">
                 Contributions are voluntary gifts toward Shawnie&rsquo;s
                 cosmetology education. No goods or services are provided in
                 exchange, and contributions are not tax-deductible
                 charitable donations.
               </p>
+              <div className="flex items-center justify-center gap-2 mt-6 pt-5 border-t border-[#E0448E]/15 text-[11px] text-[#8A7580] font-semibold">
+                <span aria-hidden="true" className="text-[#E0448E]">
+                  &#10003;
+                </span>
+                Secure donations powered by Stripe
+              </div>
             </>
           )}
         </FadeIn>
