@@ -2,11 +2,11 @@
 // without touching the checkout/webhook/UI code. Money is always kept in
 // cents (Stripe's native unit) to avoid floating-point rounding bugs.
 
-// TODO(Shawnie/Tracy): swap in her real number once she has a firm
-// tuition + kit + state-board-exam total. $12,000 is a placeholder so
-// the page has something real to render before that number exists.
+// Real goal: $26,600 (tuition + kit fees + state board exam costs).
+// Can still be overridden per-environment via SUPPORT_GOAL_CENTS if it
+// ever needs to change without a code deploy.
 export const SUPPORT_GOAL_CENTS = Number(
-  process.env.SUPPORT_GOAL_CENTS ?? 1_200_000
+  process.env.SUPPORT_GOAL_CENTS ?? 2_660_000
 );
 
 export const SUPPORT_CURRENCY = "usd";
