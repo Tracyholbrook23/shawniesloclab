@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 
 const BASE_URL = "https://www.shawniesloclab.com";
 
-const routes = ["", "/about", "/gallery", "/library", "/podcast", "/support"];
+const routes = ["", "/about", "/gallery", "/library", "/podcast", "/support", "/watch"];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
